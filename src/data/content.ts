@@ -106,8 +106,8 @@ const projects = [
       "Website portofolio interaktif untuk memperkuat personal branding dan menampilkan keahlian modern dalam React & TailwindCSS.",
     image: "public/image/portoflio.png",
     tags: ["React", "TailwindCSS", "Typescript"],
-    demoUrl: "https://rizzfar.github.io",
-    githubUrl: "http://github.com/rizzfar/rizzfar.github.io",
+    demoUrl: "https://riizuki.github.io",
+    githubUrl: "http://github.com/riizuki/riizuki.github.io",
     category: "frontend",
   },
   {
@@ -154,8 +154,8 @@ const projects = [
       "Aplikasi pencari anagram cepat berbasis algoritma dan antarmuka minimalis.",
     image: "public/image/anagram.png",
     tags: ["Javascript", "SCSS", "Web Component"],
-    demoUrl: "https://rizzfar.github.io/anagram/",
-    githubUrl: "https://github.com/rizzfar/anagram",
+    demoUrl: "https://riizuki.github.io/anagram/",
+    githubUrl: "https://github.com/riizuki/anagram",
     category: "frontend",
   },
   {
@@ -164,8 +164,8 @@ const projects = [
       "Web blog interaktif yang mengangkat budaya dan pesona kota Bandung.",
     image: "public/image/bandungcity.png",
     tags: ["ReactJS"],
-    demoUrl: "https://rizzfar.github.io/bandungcity/",
-    githubUrl: "https://github.com/rizzfar/bandungcity",
+    demoUrl: "https://riizuki.github.io/bandungcity/",
+    githubUrl: "https://github.com/riizuki/bandungcity",
     category: "frontend",
   },
   {
