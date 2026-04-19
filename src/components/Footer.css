@@ -1,0 +1,85 @@
+.footer {
+  border-top: 8px dashed var(--border-color);
+  padding: 4rem 0 2rem;
+  margin-top: 4rem;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--bg-color);
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.footer-blinker {
+  animation: blink 1s step-end infinite;
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  background-color: var(--bg-color);
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--bg-color);
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  box-shadow: 6px 6px 0px var(--accent-color);
+  text-decoration: none;
+  transition: transform 0.1s step-end;
+}
+
+.footer-social-link:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-bottom: 4px solid var(--bg-color); /* Maintain solid line */
+}
+
+.footer-social-link:active {
+  box-shadow: 2px 2px 0px var(--bg-color);
+  transform: translate(4px, 4px);
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.insert-coin {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  animation: blink 1.5s step-end infinite;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
