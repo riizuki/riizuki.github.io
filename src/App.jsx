@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Layout from './components/Layout';
@@ -7,8 +8,27 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Certificates from './pages/Certificates';
 import Contact from './pages/Contact';
+import Loader from './components/Loader';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Show loader for a duration that allows the animation to play
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2800);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <ThemeProvider>
+        <Loader />
+      </ThemeProvider>
+    );
+  }
+
   return (
     <ThemeProvider>
       <Router>
