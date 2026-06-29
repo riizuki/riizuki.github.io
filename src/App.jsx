@@ -16,17 +16,15 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Initialize Lenis for smooth momentum scrolling
     const lenis = new Lenis({
       autoRaf: true,
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
     });
 
-    // Show loader for a duration that allows the animation to play
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2800);
+    }, 1000);
     return () => {
       clearTimeout(timer);
       lenis.destroy();
