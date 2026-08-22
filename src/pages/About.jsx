@@ -40,8 +40,12 @@ export default function About() {
             <div className="space-y-6">
               {Array.isArray(jobs) && jobs.map((job, idx) => (
                 <div key={idx} className="flex flex-col border-b-2 border-black pb-6 relative group">
-                  <h3 className="font-black text-lg uppercase bg-black text-white w-max px-2 py-1 mb-2">{job.role}</h3>
-                  <p className="font-bold text-base bg-white dark:bg-white text-black w-max px-2 py-1 acid-border">{job.company}</p>
+                  <div>
+                    <h3 className="inline-block max-w-full font-black text-lg uppercase bg-black text-white px-2 py-1 mb-2 break-words">{job.role}</h3>
+                  </div>
+                  <div>
+                    <p className="inline-block max-w-full font-bold text-base bg-white dark:bg-white text-black px-2 py-1 acid-border break-words">{job.company}</p>
+                  </div>
                   <p className="text-xs my-2 font-black uppercase tracking-widest">{job.period}</p>
                   {job.description && (
                     <p className="text-sm leading-relaxed font-bold mt-2 p-3 bg-white/50 acid-border shadow-[2px_2px_0_0_#000]">{job.description}</p>
