@@ -17,19 +17,26 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="fixed bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-50 w-max max-w-[95vw]">
-      <nav className="flex items-center p-2 md:p-2.5 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] border border-white/50 dark:border-gray-700/50">
+    <div className="fixed top-0 left-0 w-full z-50">
+      <nav className="flex items-center justify-between px-4 py-2 bg-[#d1d1d1] dark:bg-[#111] border-b-4 border-black dark:border-white shadow-[0_4px_0_0_#000]">
+        
+        {/* Left side: Logo/Brand */}
+        <div className="flex items-center gap-2 mr-4">
+          <div className="w-6 h-6 bg-acid-green border-2 border-black animate-spin-slow"></div>
+          <span className="font-black font-display uppercase tracking-tighter text-xl hidden md:block">rizky_alfarid</span>
+        </div>
 
-        <div className="hidden md:flex items-center space-x-1 px-2">
+        {/* Center: Desktop Menu */}
+        <div className="hidden md:flex flex-grow items-center justify-center space-x-1">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                `px-3 py-1 text-sm font-black uppercase tracking-widest transition-all duration-300 border-2 border-transparent ${
                   isActive
-                    ? 'text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-700 shadow-sm'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                    ? 'bg-acid-pink text-black border-black acid-shadow-active translate-y-[1px] translate-x-[1px]'
+                    : 'text-black dark:text-white hover:bg-white dark:hover:bg-black hover:border-black dark:hover:border-white hover:acid-shadow-hover'
                 }`
               }
             >
@@ -38,7 +45,8 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex md:hidden items-center space-x-0.5 px-1">
+        {/* Center: Mobile Menu */}
+        <div className="flex md:hidden flex-grow justify-center space-x-1">
           {navLinks.map((link) => {
             const Icon = link.icon;
             return (
@@ -47,24 +55,23 @@ export default function Navbar() {
                 to={link.path}
                 title={link.name}
                 className={({ isActive }) =>
-                  `p-2.5 rounded-full transition-all duration-300 flex items-center justify-center ${
+                  `p-2 transition-all duration-300 flex items-center justify-center border-2 border-transparent ${
                     isActive
-                      ? 'text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-700 shadow-sm scale-110'
-                      : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                      ? 'bg-acid-pink text-black border-black acid-shadow-active translate-y-[1px] translate-x-[1px]'
+                      : 'text-black dark:text-white hover:bg-white dark:hover:bg-black hover:border-black dark:hover:border-white hover:acid-shadow-hover'
                   }`
                 }
               >
                 {({ isActive }) => (
-                  <Icon size={18} strokeWidth={isActive ? 2.5 : 2} />
+                  <Icon size={18} strokeWidth={3} />
                 )}
               </NavLink>
             );
           })}
         </div>
 
-        <div className="w-[1px] h-8 bg-gray-200 dark:bg-gray-600 mx-2 md:mx-3"></div>
-
-        <div className="flex items-center gap-1 md:gap-2 pr-1 md:pr-2">
+        {/* Right side: Tools */}
+        <div className="flex items-center gap-2 ml-4">
           <LanguageSwitcher />
           <ThemeToggle />
         </div>

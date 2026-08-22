@@ -5,34 +5,31 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="w-full pt-16 pb-32 md:pb-40 px-4 md:px-8 lg:px-12 mt-auto">
-      <div className="max-w-6xl mx-auto">
-        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-3xl p-8 md:p-12 border border-gray-100 dark:border-gray-800/80 flex flex-col md:flex-row justify-between items-center md:items-end gap-8 md:gap-0 transition-colors">
-          
-          <div className="flex flex-col text-center md:text-left">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
-              {t('footer.name')}
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-sm max-w-sm font-medium">
-              {t('footer.tagline')}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-6">
-            <a href="https://github.com/riizuki" target="_blank" rel="noreferrer" className="group flex items-center gap-1 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              GitHub <ArrowUpRight size={14} className="opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
-            </a>
-            <a href="https://linkedin.com/in/rizkyalfaridhafizh" target="_blank" rel="noreferrer" className="group flex items-center gap-1 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              LinkedIn <ArrowUpRight size={14} className="opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
-            </a>
-            <a href="https://www.instagram.com/rizky31afh_/" target="_blank" rel="noreferrer" className="group flex items-center gap-1 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              Instagram <ArrowUpRight size={14} className="opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
-            </a>
-          </div>
-
+    <footer className="w-full mt-auto bg-black text-white border-t-4 border-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <h2 className="text-2xl font-black tracking-tighter uppercase font-display mb-1 text-acid-cyan">
+            {t('footer.name')}
+          </h2>
+          <p className="text-gray-400 text-xs font-bold uppercase tracking-widest">
+            {t('footer.tagline')}
+          </p>
         </div>
 
-        <div className="mt-8 text-center text-[11px] uppercase tracking-widest font-semibold text-gray-400 dark:text-gray-500">
+        <div className="flex items-center gap-4 flex-wrap justify-center">
+          <a href="https://github.com/riizuki" target="_blank" rel="noreferrer" className="px-4 py-2 bg-acid-green text-black font-black text-xs uppercase tracking-widest acid-border hover:bg-white transition-colors flex items-center gap-1 shadow-[2px_2px_0_0_#fff]">
+            GitHub <ArrowUpRight size={14} strokeWidth={3} />
+          </a>
+          <a href="https://linkedin.com/in/rizkyalfaridhafizh" target="_blank" rel="noreferrer" className="px-4 py-2 bg-acid-pink text-black font-black text-xs uppercase tracking-widest acid-border hover:bg-white transition-colors flex items-center gap-1 shadow-[2px_2px_0_0_#fff]">
+            LinkedIn <ArrowUpRight size={14} strokeWidth={3} />
+          </a>
+          <a href="https://www.instagram.com/rizky31afh_/" target="_blank" rel="noreferrer" className="px-4 py-2 bg-acid-purple text-white font-black text-xs uppercase tracking-widest acid-border hover:bg-white hover:text-black transition-colors flex items-center gap-1 shadow-[2px_2px_0_0_#fff]">
+            Instagram <ArrowUpRight size={14} strokeWidth={3} />
+          </a>
+        </div>
+
+        <div className="text-[10px] uppercase tracking-[0.2em] font-black text-gray-500">
           {t('footer.rights')}
         </div>
       </div>

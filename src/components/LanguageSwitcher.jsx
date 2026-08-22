@@ -11,7 +11,7 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm font-medium transition-colors hover:bg-gray-200 dark:hover:bg-gray-700 uppercase"
+      className="px-3 py-2 acid-border bg-white dark:bg-black text-black dark:text-white text-sm font-black transition-all hover:acid-shadow-hover hover:bg-acid-green dark:hover:bg-acid-green dark:hover:text-black active:acid-shadow-active active:translate-y-[2px] active:translate-x-[2px] uppercase"
       aria-label="Toggle language"
     >
       {i18n.language === 'en' ? 'EN' : 'ID'}

@@ -1,18 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --color-gray-50: var(--color-neutral-50);
-  --color-gray-100: var(--color-neutral-100);
-  --color-gray-200: var(--color-neutral-200);
-  --color-gray-300: var(--color-neutral-300);
-  --color-gray-400: var(--color-neutral-400);
-  --color-gray-500: var(--color-neutral-500);
-  --color-gray-600: var(--color-neutral-600);
-  --color-gray-700: var(--color-neutral-700);
-  --color-gray-800: var(--color-neutral-800);
-  --color-gray-900: var(--color-neutral-900);
-  --color-gray-950: var(--color-neutral-950);
+  --font-sans: "Space Mono", monospace;
+  --font-display: "Syne", sans-serif;
+  
+  --color-acid-green: #ccff00;
+  --color-acid-pink: #ff00ff;
+  --color-acid-cyan: #00ffff;
+  --color-acid-purple: #9d00ff;
+  --color-acid-black: #0a0a0a;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -22,10 +18,90 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-gray-50 text-gray-900 transition-colors duration-300;
-    font-family: "Inter", system-ui, sans-serif;
+    @apply bg-[#e6e6e6] text-black transition-colors duration-300;
+    font-family: "Space Mono", monospace;
+    background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+    background-size: 20px 20px;
+    cursor: crosshair;
+  }
+  a, button, [role="button"], input, textarea, select {
+    cursor: cell;
   }
   .dark body {
-    @apply bg-gray-900 text-gray-100;
+    @apply bg-acid-black text-white;
+    background-image: radial-gradient(#222 1px, transparent 1px);
+    background-size: 20px 20px;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Syne", sans-serif;
+  }
+}
+
+@layer utilities {
+  .acid-border {
+    @apply border-2 border-black dark:border-white;
+  }
+  .acid-shadow {
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  }
+  .dark .acid-shadow {
+    box-shadow: 4px 4px 0px 0px rgba(255,255,255,1);
+  }
+  .acid-shadow-hover {
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  }
+  .dark .acid-shadow-hover {
+    box-shadow: 6px 6px 0px 0px rgba(255,255,255,1);
+  }
+  .acid-shadow-active {
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+    transform: translate(2px, 2px);
+  }
+  .dark .acid-shadow-active {
+    box-shadow: 2px 2px 0px 0px rgba(255,255,255,1);
+    transform: translate(2px, 2px);
+  }
+  
+  .bg-checkerboard {
+    background-image: repeating-linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), repeating-linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+  }
+  .bg-stripes {
+    background: repeating-linear-gradient(
+      -45deg,
+      #000,
+      #000 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+  .dark .bg-stripes {
+    background: repeating-linear-gradient(
+      -45deg,
+      #fff,
+      #fff 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
 }
