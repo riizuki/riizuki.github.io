@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Space Mono", monospace;
-  --font-display: "Syne", sans-serif;
+  --font-sans: "Patrick Hand", cursive;
+  --font-display: "Kalam", cursive;
   
-  --color-acid-green: #ccff00;
-  --color-acid-pink: #ff00ff;
-  --color-acid-cyan: #00ffff;
-  --color-acid-purple: #9d00ff;
-  --color-acid-black: #0a0a0a;
+  --color-doodle-paper: #f4eedc;
+  --color-doodle-ink: #2a2a2a;
+  --color-doodle-blue: #a3c4f3;
+  --color-doodle-pink: #fbc4ab;
+  --color-doodle-yellow: #fbf8cc;
+  --color-doodle-green: #b9fbc0;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -18,90 +19,90 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-[#e6e6e6] text-black transition-colors duration-300;
-    font-family: "Space Mono", monospace;
-    background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
-    background-size: 20px 20px;
-    cursor: crosshair;
-  }
-  a, button, [role="button"], input, textarea, select {
-    cursor: cell;
+    @apply bg-doodle-paper text-doodle-ink transition-colors duration-300;
+    font-family: "Patrick Hand", cursive;
+    /* Notebook paper lines */
+    background-image: 
+      linear-gradient(90deg, transparent 40px, #ff9999 40px, #ff9999 42px, transparent 42px),
+      linear-gradient(#e1e1e1 1px, transparent 1px);
+    background-size: 100% 100%, 100% 28px;
+    background-position: 0 0, 0 28px;
+    cursor: auto;
   }
   .dark body {
-    @apply bg-acid-black text-white;
-    background-image: radial-gradient(#222 1px, transparent 1px);
-    background-size: 20px 20px;
+    @apply bg-[#1a1a1a] text-[#e0e0e0];
+    background-image: 
+      linear-gradient(90deg, transparent 40px, #553333 40px, #553333 42px, transparent 42px),
+      linear-gradient(#333 1px, transparent 1px);
+    background-size: 100% 100%, 100% 28px;
+    background-position: 0 0, 0 28px;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Syne", sans-serif;
+    font-family: "Kalam", cursive;
+    @apply font-bold tracking-normal;
   }
 }
 
 @layer utilities {
-  .acid-border {
-    @apply border-2 border-black dark:border-white;
+  .doodle-border {
+    border: 2px solid currentColor;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   }
-  .acid-shadow {
-    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  .doodle-border-sm {
+    border: 1.5px solid currentColor;
+    border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
   }
-  .dark .acid-shadow {
-    box-shadow: 4px 4px 0px 0px rgba(255,255,255,1);
+  .doodle-shadow {
+    box-shadow: 3px 4px 0px 0px rgba(0,0,0,0.15);
   }
-  .acid-shadow-hover {
-    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
-  }
-  .dark .acid-shadow-hover {
-    box-shadow: 6px 6px 0px 0px rgba(255,255,255,1);
-  }
-  .acid-shadow-active {
-    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
-    transform: translate(2px, 2px);
-  }
-  .dark .acid-shadow-active {
-    box-shadow: 2px 2px 0px 0px rgba(255,255,255,1);
-    transform: translate(2px, 2px);
+  .dark .doodle-shadow {
+    box-shadow: 3px 4px 0px 0px rgba(255,255,255,0.1);
   }
   
-  .bg-checkerboard {
-    background-image: repeating-linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), repeating-linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
-    background-position: 0 0, 10px 10px;
-    background-size: 20px 20px;
+  .scribble-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 C 30 20, 70 0, 90 20 C 100 40, 80 80, 70 90 C 50 100, 10 90, 10 70 Z' fill='none' stroke='%232a2a2a' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+    background-size: 150px;
   }
-  .bg-stripes {
-    background: repeating-linear-gradient(
-      -45deg,
-      #000,
-      #000 10px,
-      transparent 10px,
-      transparent 20px
-    );
+  .dark .scribble-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 C 30 20, 70 0, 90 20 C 100 40, 80 80, 70 90 C 50 100, 10 90, 10 70 Z' fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.05'/%3E%3C/svg%3E");
   }
-  .dark .bg-stripes {
-    background: repeating-linear-gradient(
-      -45deg,
-      #fff,
-      #fff 10px,
-      transparent 10px,
-      transparent 20px
-    );
+  
+  .highlighter-yellow {
+    background: linear-gradient(104deg, transparent 0%, transparent 2%, #fbf8cc 2%, #fbf8cc 98%, transparent 98%, transparent 100%);
+    padding: 0 4px;
+  }
+  .dark .highlighter-yellow {
+    background: linear-gradient(104deg, transparent 0%, transparent 2%, #8b8000 2%, #8b8000 98%, transparent 98%, transparent 100%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
-.animate-marquee {
-  animation: marquee 15s linear infinite;
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes sketch {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(1deg) scale(1.01); }
+  50% { transform: rotate(0deg) scale(1); }
+  75% { transform: rotate(-1deg) scale(0.99); }
+  100% { transform: rotate(0deg) scale(1); }
 }
 
-.animate-spin-slow {
-  animation: spin-slow 10s linear infinite;
+.animate-sketch {
+  animation: sketch 0.3s infinite steps(2);
 }

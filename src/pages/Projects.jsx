@@ -1,21 +1,20 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight, FolderOpen } from 'lucide-react';
 import Window from '../components/Window';
 
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, scale: 0.9 },
   visible: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: [0.25, 1, 0.5, 1] },
+    scale: 1,
+    transition: { duration: 0.4 },
   },
 };
 
@@ -28,21 +27,14 @@ export default function Projects() {
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6"
+        className="mb-12"
       >
-        <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white font-black text-xs uppercase tracking-widest mb-4 acid-border shadow-[2px_2px_0_0_#000]">
-            <FolderOpen size={14} className="text-acid-green" />
-            {Array.isArray(projectList) ? `${projectList.length} ITEMS FOUND` : 'PROJECTS'}
-          </div>
-          <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-black dark:text-white font-display">
-            {t('nav.projects')}
-          </h1>
-        </div>
-        <div className="text-sm font-bold max-w-xs uppercase bg-acid-cyan p-2 acid-border shadow-[2px_2px_0_0_#000] text-black">
-          Directory listing of recent works, side projects, and experiments.
-        </div>
+        <h1 className="text-6xl font-bold font-display inline-block highlighter-yellow text-doodle-ink transform -rotate-2">
+          {t('nav.projects')}
+        </h1>
+        <p className="text-xl mt-4 font-sans text-gray-600 dark:text-gray-400 max-w-sm">
+          A collection of things I've built.
+        </p>
       </motion.div>
 
       <motion.div
@@ -52,53 +44,45 @@ export default function Projects() {
         animate="visible"
       >
         {Array.isArray(projectList) && projectList.map((project, idx) => {
-          const bgColors = ['bg-acid-green', 'bg-acid-pink', 'bg-acid-cyan', 'bg-acid-purple', 'bg-white'];
-          const randomBg = bgColors[idx % bgColors.length];
           return (
             <motion.div key={idx} variants={cardVariants} className="h-full">
               <Window 
-                title={`project_${idx+1}.exe`} 
-                bgClass="bg-white dark:bg-black h-full"
+                title={`Project #${idx+1}`} 
+                bgClass="bg-white dark:bg-[#222] h-full"
                 className="group"
               >
-                <div className="relative w-full aspect-video overflow-hidden mb-4 acid-border">
-                  <div className={`absolute inset-0 opacity-20 ${randomBg} mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity`}></div>
+                <div className="relative w-full aspect-video overflow-hidden mb-4 doodle-border">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top filter grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    className="w-full h-full object-cover object-top filter sepia-[0.2] group-hover:sepia-0 transition-all duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute top-2 left-2 z-20">
-                    <span className="bg-black text-white text-[10px] font-black uppercase px-2 py-1 acid-border">
-                      {String(idx + 1).padStart(2, '0')}
-                    </span>
-                  </div>
                 </div>
 
                 <div className="flex flex-col flex-grow">
-                  <h3 className="text-2xl font-black uppercase tracking-tight mb-2 font-display group-hover:text-acid-pink transition-colors line-clamp-2">
+                  <h3 className="text-3xl font-bold mb-2 font-display line-clamp-2 decoration-wavy decoration-doodle-blue group-hover:underline">
                     {project.title}
                   </h3>
                   
-                  <div className="flex flex-wrap gap-1.5 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags?.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className={`px-2 py-0.5 text-[10px] font-black uppercase acid-border ${bgColors[tIdx % bgColors.length]} text-black`}
+                        className="px-2 py-0.5 text-lg font-sans border-2 border-dashed border-gray-400 rounded-lg text-gray-600 dark:text-gray-300"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
                   
-                  <p className="text-sm font-bold line-clamp-3 mb-6 flex-grow">{project.description}</p>
+                  <p className="text-xl font-sans line-clamp-3 mb-6 flex-grow">{project.description}</p>
                   
                   <div className="flex items-center gap-3 mt-auto">
-                    <a href={project.demoUrl || "#"} className="flex-1 text-center bg-black text-white py-2 font-black text-xs uppercase tracking-widest acid-border hover:bg-acid-green hover:text-black transition-colors shadow-[2px_2px_0_0_#000]">
+                    <a href={project.demoUrl || "#"} className="flex-1 text-center bg-doodle-green text-doodle-ink py-2 font-bold text-xl doodle-border hover:scale-105 transition-transform">
                       Demo
                     </a>
-                    <a href={project.codeUrl || "#"} className="flex-1 text-center bg-white text-black py-2 font-black text-xs uppercase tracking-widest acid-border hover:bg-acid-pink hover:text-black transition-colors shadow-[2px_2px_0_0_#000]">
+                    <a href={project.codeUrl || "#"} className="flex-1 text-center bg-white text-doodle-ink py-2 font-bold text-xl doodle-border hover:scale-105 transition-transform">
                       Code
                     </a>
                   </div>

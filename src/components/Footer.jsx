@@ -1,35 +1,28 @@
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="w-full mt-auto bg-black text-white border-t-4 border-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h2 className="text-2xl font-black tracking-tighter uppercase font-display mb-1 text-acid-cyan">
+    <footer className="w-full mt-24 mb-8">
+      <div className="max-w-4xl mx-auto px-4 flex flex-col items-center justify-center relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-gray-300 dark:bg-gray-700 rounded-full mb-8"></div>
+        <div className="mt-8 flex flex-col items-center text-center">
+          <h2 className="text-3xl font-bold font-display text-doodle-ink dark:text-gray-200 mb-2 transform -rotate-1">
             {t('footer.name')}
           </h2>
-          <p className="text-gray-400 text-xs font-bold uppercase tracking-widest">
+          <p className="font-sans text-lg text-gray-600 dark:text-gray-400 max-w-sm">
             {t('footer.tagline')}
           </p>
         </div>
-
-        <div className="flex items-center gap-4 flex-wrap justify-center">
-          <a href="https://github.com/riizuki" target="_blank" rel="noreferrer" className="px-4 py-2 bg-acid-green text-black font-black text-xs uppercase tracking-widest acid-border hover:bg-white transition-colors flex items-center gap-1 shadow-[2px_2px_0_0_#fff]">
-            GitHub <ArrowUpRight size={14} strokeWidth={3} />
-          </a>
-          <a href="https://linkedin.com/in/rizkyalfaridhafizh" target="_blank" rel="noreferrer" className="px-4 py-2 bg-acid-pink text-black font-black text-xs uppercase tracking-widest acid-border hover:bg-white transition-colors flex items-center gap-1 shadow-[2px_2px_0_0_#fff]">
-            LinkedIn <ArrowUpRight size={14} strokeWidth={3} />
-          </a>
-          <a href="https://www.instagram.com/rizky31afh_/" target="_blank" rel="noreferrer" className="px-4 py-2 bg-acid-purple text-white font-black text-xs uppercase tracking-widest acid-border hover:bg-white hover:text-black transition-colors flex items-center gap-1 shadow-[2px_2px_0_0_#fff]">
-            Instagram <ArrowUpRight size={14} strokeWidth={3} />
-          </a>
+        
+        <div className="flex flex-wrap justify-center gap-6 mt-6 text-2xl">
+          <a href="https://github.com/riizuki" className="px-4 py-1 bg-white doodle-border transform rotate-2 hover:scale-110 transition-transform text-doodle-ink font-bold shadow-sm">GitHub</a>
+          <a href="https://linkedin.com/in/rizkyalfaridhafizh" className="px-4 py-1 bg-white doodle-border transform -rotate-2 hover:scale-110 transition-transform text-doodle-ink font-bold shadow-sm">LinkedIn</a>
+          <a href="https://www.instagram.com/rizky31afh_/" className="px-4 py-1 bg-white doodle-border transform rotate-1 hover:scale-110 transition-transform text-doodle-ink font-bold shadow-sm">Instagram</a>
         </div>
-
-        <div className="text-[10px] uppercase tracking-[0.2em] font-black text-gray-500">
+        
+        <div className="mt-12 text-base font-sans text-gray-500 transform rotate-1 bg-doodle-yellow px-2 py-1 doodle-border border-gray-400 border-dashed">
           {t('footer.rights')}
         </div>
       </div>
