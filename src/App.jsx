@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { ThemeProvider } from './context/ThemeContext';
+import { LenisProvider } from './context/LenisContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -16,18 +16,11 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const lenis = new Lenis({
-      autoRaf: true,
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-    });
-
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 1800);
     return () => {
       clearTimeout(timer);
-      lenis.destroy();
     };
   }, []);
 
@@ -41,18 +34,20 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="skills" element={<Skills />} />
-            <Route path="certificates" element={<Certificates />} />
-            <Route path="contact" element={<Contact />} />
-          </Route>
-        </Routes>
-      </Router>
+      <LenisProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="skills" element={<Skills />} />
+              <Route path="certificates" element={<Certificates />} />
+              <Route path="contact" element={<Contact />} />
+            </Route>
+          </Routes>
+        </Router>
+      </LenisProvider>
     </ThemeProvider>
   );
 }

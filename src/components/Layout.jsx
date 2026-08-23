@@ -4,9 +4,9 @@ import Footer from './Footer';
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen text-current transition-colors duration-300 pt-24">
+    <div className="flex flex-col min-h-screen text-current transition-colors duration-300 pt-20 relative">
       <Navbar />
-      <main className="flex-grow w-full px-0 sm:px-4 lg:px-8">
+      <main className="flex-grow w-full relative">
         <Outlet />
       </main>
       <Footer />

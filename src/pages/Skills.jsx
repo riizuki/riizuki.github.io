@@ -1,70 +1,64 @@
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import Window from '../components/Window';
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-  },
-};
+import { ScrollReveal, Starburst } from '../components/ScrollAnimations';
 
 export default function Skills() {
   const { t } = useTranslation();
   const categories = t('skills.categories', { returnObjects: true });
 
-  return (
-    <div className="flex flex-col max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16 pb-32">
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-12"
-      >
-        <h1 className="text-6xl font-bold font-display inline-block bg-doodle-pink text-doodle-ink px-4 py-2 transform rotate-1 doodle-border shadow-sm">
-          {t('skills.title')}
-        </h1>
-      </motion.div>
+  const bgColors = [
+    'bg-mcm-orange',
+    'bg-mcm-teal',
+    'bg-mcm-mustard',
+    'bg-mcm-olive'
+  ];
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+  return (
+    <div className="flex flex-col max-w-6xl mx-auto px-4 md:px-8 lg:px-16 py-20 pb-32">
+      
+      
+      <ScrollReveal variant="slide-left" className="mb-20">
+        <div className="flex items-center gap-6 border-b-4 border-mcm-dark dark:border-[#EBE7DF] pb-6">
+          <h1 className="text-5xl md:text-7xl font-display font-bold uppercase tracking-tighter text-mcm-dark dark:text-[#EBE7DF]">
+            {t('skills.title')}
+          </h1>
+          <Starburst size={48} color="var(--color-mcm-orange)" className="animate-spin-slow" />
+        </div>
+        <p className="text-xl md:text-3xl font-display font-bold uppercase text-mcm-dark/80 dark:text-[#EBE7DF]/80 max-w-2xl">
+          {t('skills.subtitle')}
+        </p>
+      </ScrollReveal>
+
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {Array.isArray(categories) && categories.map((cat, idx) => {
+          const bgColorClass = bgColors[idx % bgColors.length];
           return (
-            <motion.div key={idx} variants={cardVariants} className="h-full">
-              <Window 
-                title={cat.name} 
-                bgClass="bg-white dark:bg-[#222] h-full"
-              >
-                <div className="flex flex-wrap gap-3 mt-4">
-                  {cat.items?.map((skill, sIdx) => {
-                    const pillBgClasses = ['bg-doodle-yellow', 'bg-doodle-blue', 'bg-doodle-green', 'bg-doodle-pink', 'bg-white'];
-                    const pillBg = pillBgClasses[sIdx % pillBgClasses.length];
-                    return (
-                      <div
-                        key={sIdx}
-                        className={`px-3 py-1 ${pillBg} doodle-border text-xl font-sans text-doodle-ink shadow-sm hover:scale-110 transition-transform cursor-crosshair transform ${Math.random() > 0.5 ? 'rotate-2' : '-rotate-1'}`}
-                      >
-                        {skill}
-                      </div>
-                    );
-                  })}
+            <ScrollReveal key={idx} variant="fade-up" delay={idx * 0.1}>
+              <div className={`mcm-card h-full ${bgColorClass} !border-4 p-8 md:p-10 flex flex-col`}>
+                
+                <div className="flex items-start justify-between mb-8 border-b-4 border-mcm-dark dark:border-[#EBE7DF] pb-4">
+                  <h3 className="text-3xl md:text-4xl font-display font-bold uppercase text-mcm-dark dark:text-[#EBE7DF]">
+                    {cat.name}
+                  </h3>
                 </div>
-              </Window>
-            </motion.div>
+
+                <div className="flex flex-wrap gap-3 mt-auto">
+                  {cat.items?.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="px-4 py-2 bg-mcm-cream dark:bg-mcm-dark border-2 border-mcm-dark dark:border-[#EBE7DF] text-mcm-dark dark:text-[#EBE7DF] font-display font-bold uppercase tracking-wider text-sm shadow-[3px_3px_0px_0px_rgba(44,43,41,1)] dark:shadow-[3px_3px_0px_0px_#F4F1EA] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_0px_rgba(44,43,41,1)] dark:shadow-[5px_5px_0px_0px_#F4F1EA] transition-all cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+              </div>
+            </ScrollReveal>
           );
         })}
-      </motion.div>
+      </div>
+
     </div>
   );
 }

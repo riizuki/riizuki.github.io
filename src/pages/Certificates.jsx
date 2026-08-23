@@ -1,116 +1,125 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import Window from '../components/Window';
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-  },
-};
+import { Plus, Minus } from 'lucide-react';
+import { ScrollReveal, Starburst, VelocityText } from '../components/ScrollAnimations';
 
 export default function Certificates() {
   const { t } = useTranslation();
   const certList = t('certificates.list', { returnObjects: true });
-  const [lightboxCert, setLightboxCert] = useState(null);
+  
+  
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (idx) => {
+    setExpandedIndex(expandedIndex === idx ? null : idx);
+  };
 
   return (
-    <>
-      <div className="flex flex-col max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16 pb-32">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-12"
-        >
-          <h1 className="text-6xl font-bold font-display underline decoration-wavy decoration-doodle-pink">
-            {t('certificates.title')}
-          </h1>
-        </motion.div>
+    <div className="flex flex-col w-full bg-mcm-cream dark:bg-mcm-dark transition-colors duration-300 min-h-screen pb-32">
+      
+      
+      <section className="w-full bg-[#1A1918] dark:bg-[#1A1918] border-b-8 border-mcm-dark dark:border-[#EBE7DF] pt-32 pb-16 px-4 md:px-8 lg:px-16 relative overflow-hidden z-20">
+        <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center">
+          <VelocityText>
+             <h1 className="text-[50px] md:text-[90px] lg:text-[140px] font-display font-bold uppercase tracking-tighter text-[#EBE7DF] dark:text-mcm-mustard leading-[0.85] mb-6">
+               {t('certificates.title')}
+             </h1>
+          </VelocityText>
+          <p className="text-xl md:text-3xl font-display font-bold uppercase text-[#EBE7DF]/80 max-w-2xl">
+            {t('certificates.subtitle')}
+          </p>
+        </div>
+        <Starburst size={300} color="rgba(235,231,223,0.03)" className="absolute -bottom-20 -right-20 pointer-events-none" />
+      </section>
 
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {Array.isArray(certList) && certList.map((cert, idx) => (
-            <motion.div key={idx} variants={cardVariants} className="h-full">
-              <Window 
-                title={`Award #${idx+1}`} 
-                bgClass="bg-[#fff] dark:bg-[#222] h-full"
-                className="group cursor-pointer hover:-translate-y-2 transition-transform"
-              >
-                <div
-                  className="relative w-full aspect-[4/3] overflow-hidden doodle-border mb-4"
-                  onClick={() => setLightboxCert(cert)}
-                >
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="w-full h-full object-cover filter sepia-[0.3] group-hover:sepia-0 transition-all duration-300"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-doodle-yellow/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="font-display text-2xl font-bold text-doodle-ink transform rotate-[-10deg]">Click to View!</span>
-                  </div>
-                </div>
+      
+      <div className="w-full max-w-7xl mx-auto pt-24 px-4 sm:px-8">
+        <div className="flex flex-col border-t-8 border-mcm-dark dark:border-[#EBE7DF]">
+          
+          {Array.isArray(certList) && certList.map((cert, idx) => {
+            const isExpanded = expandedIndex === idx;
+            
+            return (
+              <ScrollReveal key={idx} variant="fade-up" delay={0.1} className="w-full">
+                <div className="flex flex-col border-b-8 border-mcm-dark dark:border-[#EBE7DF] overflow-hidden">
+                  
+                  
+                  <button 
+                    onClick={() => toggleExpand(idx)}
+                    className={`w-full flex flex-col md:flex-row items-start md:items-center justify-between p-6 md:p-12 transition-colors duration-300 group
+                      ${isExpanded ? 'bg-mcm-mustard dark:bg-[#201F1D]' : 'bg-transparent hover:bg-mcm-dark dark:hover:bg-[#EBE7DF]'}
+                    `}
+                  >
+                    
+                    
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12 w-full md:w-1/3 mb-4 md:mb-0">
+                      <span className={`font-display font-bold text-2xl md:text-3xl transition-colors duration-300
+                        ${isExpanded ? 'text-mcm-dark dark:text-[#EBE7DF]' : 'text-mcm-dark/50 dark:text-[#EBE7DF]/50 group-hover:text-[#EBE7DF] dark:group-hover:text-mcm-dark'}
+                      `}>
+                        / 0{idx + 1}
+                      </span>
+                      <span className={`font-sans font-bold text-sm md:text-base uppercase tracking-widest transition-colors duration-300 text-left
+                        ${isExpanded ? 'text-mcm-teal dark:text-mcm-orange' : 'text-mcm-teal dark:text-mcm-orange group-hover:text-mcm-mustard dark:group-hover:text-mcm-dark'}
+                      `}>
+                        {cert.issuer}
+                      </span>
+                    </div>
 
-                <div className="flex flex-col flex-grow text-center">
-                  <h3 className="text-2xl font-bold font-display mb-1">
-                    {cert.title}
-                  </h3>
-                  <span className="text-lg font-sans text-gray-500">{cert.issuer}</span>
+                    
+                    <div className="flex-grow w-full md:w-auto text-left">
+                      <h3 className={`font-display font-bold text-4xl md:text-5xl lg:text-7xl uppercase tracking-tight leading-none transition-colors duration-300
+                        ${isExpanded ? 'text-mcm-dark dark:text-[#EBE7DF]' : 'text-mcm-dark dark:text-[#EBE7DF] group-hover:text-mcm-cream dark:group-hover:text-[#1A1918]'}
+                      `}>
+                        {cert.title}
+                      </h3>
+                    </div>
+
+                    
+                    <div className={`hidden md:flex ml-8 transition-colors duration-300 flex-shrink-0
+                      ${isExpanded ? 'text-mcm-dark dark:text-[#EBE7DF]' : 'text-mcm-dark dark:text-[#EBE7DF] group-hover:text-mcm-mustard dark:group-hover:text-mcm-dark'}
+                    `}>
+                      {isExpanded ? <Minus size={48} strokeWidth={2} /> : <Plus size={48} strokeWidth={2} />}
+                    </div>
+                  </button>
+
+                  
+                  <AnimatePresence>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        className="bg-mcm-cream dark:bg-[#1A1918]"
+                      >
+                        <div className="p-6 md:p-16 flex justify-center">
+                          <div className="relative w-full max-w-5xl border-8 border-mcm-dark dark:border-[#EBE7DF] bg-[#2C2B29] p-4 md:p-6 shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[16px_16px_0px_0px_rgba(226,166,59,1)]">
+                            
+                            <img
+                              src={cert.image}
+                              alt={cert.title}
+                              className="w-full h-auto object-contain grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                              loading="lazy"
+                            />
+                            
+                            
+                            <div className="absolute top-0 left-0 w-8 md:w-16 h-8 md:h-16 border-b-8 border-r-8 border-mcm-dark dark:border-[#EBE7DF] bg-mcm-mustard" />
+                            <div className="absolute bottom-0 right-0 w-8 md:w-16 h-8 md:h-16 border-t-8 border-l-8 border-mcm-dark dark:border-[#EBE7DF] bg-mcm-mustard" />
+                            
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
                 </div>
-              </Window>
-            </motion.div>
-          ))}
-        </motion.div>
+              </ScrollReveal>
+            );
+          })}
+        </div>
       </div>
 
-      <AnimatePresence>
-        {lightboxCert && (
-          <motion.div
-            className="fixed inset-0 z-[60] flex items-center justify-center p-4 md:p-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setLightboxCert(null)} />
-
-            <motion.div
-              className="relative max-w-5xl w-full"
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={() => setLightboxCert(null)}
-                className="absolute -top-1 -right-1 md:-top-3 md:-right-3 z-[70] w-10 h-10 md:w-12 md:h-12 bg-doodle-pink text-doodle-ink doodle-border shadow-sm flex items-center justify-center hover:scale-110 transition-transform font-bold text-xl"
-              >
-                X
-              </button>
-              <Window title="Viewing Certificate..." bgClass="bg-white dark:bg-[#222]">
-                <div className="w-full flex justify-center p-4 doodle-border bg-gray-50">
-                  <img src={lightboxCert.image} alt={lightboxCert.title} className="w-full max-h-[60vh] object-contain" />
-                </div>
-                <div className="mt-6 text-center">
-                  <h3 className="text-3xl font-bold font-display">{lightboxCert.title}</h3>
-                </div>
-              </Window>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+    </div>
   );
 }
