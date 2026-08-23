@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
             
             <h2 className="text-5xl md:text-7xl lg:text-[100px] font-display font-bold uppercase tracking-tighter text-mcm-dark dark:text-[#EBE7DF] leading-[0.85] mb-6">
-              {t('footer.lets')} <br /> the <span className="text-transparent" style={{ WebkitTextStroke: '2px currentColor' }}>{t('footer.thefuture')}</span>
+              {t('footer.lets')} <br /> <span className="text-mcm-orange dark:text-mcm-mustard">{t('footer.thefuture')}</span>
             </h2>
             
             <p className="font-sans font-bold text-lg md:text-xl text-mcm-dark/70 dark:text-[#EBE7DF]/70 max-w-md">
@@ -89,7 +89,7 @@ export default function Footer() {
                 href={link.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative w-full bg-mcm-cream dark:bg-[#1F222B] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-6 flex items-center justify-between shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] hover:translate-x-2 hover:-translate-y-2 hover:shadow-[14px_14px_0px_0px_rgba(226,166,59,1)] transition-all duration-300"
+                className="group relative w-full bg-mcm-cream dark:bg-[#1F222B] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-6 flex items-center justify-between shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] hover:translate-x-2 hover:-translate-y-2 hover:shadow-[6px_6px_0px_0px_rgba(226,166,59,1)] md:hover:shadow-[14px_14px_0px_0px_rgba(226,166,59,1)] transition-all duration-300"
               >
                 <span className="font-display font-bold text-2xl md:text-3xl uppercase text-mcm-dark dark:text-[#EBE7DF]">
                   {link.name}

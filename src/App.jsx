@@ -11,6 +11,7 @@ import Skills from './pages/Skills';
 import Certificates from './pages/Certificates';
 import Contact from './pages/Contact';
 import Journal from './pages/Journal';
+import NotFound from './pages/NotFound';
 import Loader from './components/Loader';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
               <Route path="certificates" element={<Certificates />} />
               <Route path="journal" element={<Journal />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </Router>

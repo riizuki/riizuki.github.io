@@ -66,7 +66,7 @@ export default function Skills() {
                 delay={idx * 0.1}
                 className={style.bentoClass}
               >
-                <div className={`w-full h-full border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-6 md:p-10 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:hover:shadow-[16px_16px_0px_0px_#F4F1EA] transition-all duration-300 group ${style.bg} ${style.text}`}>
+                <div className={`w-full h-full border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-6 md:p-10 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:hover:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] hover:shadow-[8px_8px_0px_0px_#F4F1EA] md:hover:shadow-[16px_16px_0px_0px_#F4F1EA] transition-all duration-300 group ${style.bg} ${style.text}`}>
                   
                   {/* Category Header */}
                   <div className={`flex flex-col gap-4 md:gap-6 mb-8 w-full ${idx === 3 ? 'md:w-1/2 lg:w-2/5' : ''}`}>

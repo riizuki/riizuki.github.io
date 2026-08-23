@@ -46,7 +46,7 @@ export default function Journal() {
                 delay={index * 0.1}
                 className={`${colSpan} flex flex-col group`}
               >
-                <div className={`w-full flex flex-col ${isFeatured ? 'lg:flex-row' : ''} border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] bg-mcm-cream dark:bg-[#14161C] shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] overflow-hidden hover:-translate-y-2 transition-transform duration-300`}>
+                <div className={`w-full flex flex-col ${isFeatured ? 'lg:flex-row' : ''} border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] bg-mcm-cream dark:bg-[#14161C] shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] overflow-hidden hover:-translate-y-2 transition-transform duration-300`}>
                   
                   {/* Image Container */}
                   <div className={`relative ${isFeatured ? 'lg:w-1/2' : 'w-full'} h-64 md:h-80 lg:h-96 border-b-4 lg:border-b-0 ${isFeatured ? 'lg:border-r-8' : ''} border-mcm-dark dark:border-[#EBE7DF] overflow-hidden bg-mcm-mustard`}>

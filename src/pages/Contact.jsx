@@ -41,7 +41,7 @@ export default function Contact() {
           <div className="w-full lg:w-1/3 flex flex-col gap-10">
             <ScrollReveal variant="slide-right" delay={0.1} className="flex flex-col gap-8">
               
-              <div className="bg-mcm-mustard dark:bg-[#14161C] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA]">
+              <div className="bg-mcm-mustard dark:bg-[#14161C] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA]">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-mcm-orange p-3 border-4 border-mcm-dark dark:border-[#EBE7DF]">
                     <Mail size={24} className="text-mcm-cream dark:text-mcm-dark" strokeWidth={2.5} />
@@ -53,7 +53,7 @@ export default function Contact() {
                 </a>
               </div>
 
-              <div className="bg-mcm-teal dark:bg-[#1F222B] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA]">
+              <div className="bg-mcm-teal dark:bg-[#1F222B] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA]">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-mcm-cream dark:bg-mcm-dark p-3 border-4 border-mcm-dark dark:border-[#EBE7DF]">
                     <MapPin size={24} className="text-mcm-teal dark:text-mcm-orange" strokeWidth={2.5} />
@@ -73,7 +73,7 @@ export default function Contact() {
             <ScrollReveal variant="slide-left" delay={0.2} className="h-full">
               <form 
                 onSubmit={handleSubmit} 
-                className="bg-mcm-cream dark:bg-mcm-dark border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 md:p-12 shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[16px_16px_0px_0px_#F4F1EA] flex flex-col gap-8 relative z-10"
+                className="bg-mcm-cream dark:bg-mcm-dark border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:dark:shadow-[16px_16px_0px_0px_#F4F1EA] flex flex-col gap-8 relative z-10"
               >
                 
                 
@@ -130,7 +130,7 @@ export default function Contact() {
                 
                 <button 
                   type="submit" 
-                  className="w-full bg-mcm-orange hover:bg-mcm-dark dark:hover:bg-[#EBE7DF] text-mcm-cream dark:text-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] px-8 py-5 mt-4 font-display font-bold uppercase text-2xl flex items-center justify-center gap-3 transition-colors shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_rgba(235,231,223,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px]"
+                  className="w-full bg-mcm-orange hover:bg-mcm-dark dark:hover:bg-[#EBE7DF] text-mcm-cream dark:text-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] px-8 py-5 mt-4 font-display font-bold uppercase text-2xl flex items-center justify-center gap-3 transition-colors shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_rgba(235,231,223,1)] md:dark:shadow-[6px_6px_0px_0px_rgba(235,231,223,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px]"
                 >
                   {t('contact.send')} <ArrowRight size={28} strokeWidth={3} />
                 </button>

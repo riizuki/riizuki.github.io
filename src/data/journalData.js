@@ -1,44 +1,44 @@
 export const journalEntries = [
   {
     id: 1,
-    date: "August 2026",
+    date: "12 August 2026",
     week: "Minggu 1",
     title: {
-      en: "The Arrival & Community Mapping",
-      id: "Kedatangan & Pemetaan Masyarakat"
+      en: "Departure & Arrival at Coblong",
+      id: "Pelepasan & Kedatangan di Coblong"
     },
     description: {
-      en: "Arrived at the village. We spent the first week introducing ourselves to the locals, understanding the geographical challenges, and mapping out the potentials for our upcoming programs.",
-      id: "Tiba di desa sasaran. Kami menghabiskan minggu pertama untuk berkenalan dengan warga lokal, memahami tantangan geografis, dan memetakan potensi desa untuk program-program mendatang."
+      en: "Officially dispatched by the Rector of UNIKOM along with 560 other students for the 2026 KKN Berdampak program. We arrived at Coblong District, Bandung City, and began territory mapping for our waste management program.",
+      id: "Secara resmi dilepas oleh Rektor UNIKOM bersama 560 mahasiswa lainnya untuk program KKN Berdampak 2026. Kami tiba di Kecamatan Coblong, Kota Bandung, dan memulai pemetaan wilayah untuk program pengelolaan sampah."
     },
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200"
+    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: 2,
     date: "August 2026",
     week: "Minggu 2",
     title: {
-      en: "Digital Literacy Workshop",
-      id: "Lokakarya Literasi Digital"
+      en: "Waste Sorting Education",
+      id: "Edukasi Pemilahan Sampah"
     },
     description: {
-      en: "Conducted a seminar on digital literacy and basic programming for the village youths. The enthusiasm was overwhelming! We also taught them how to use technology for local business marketing.",
-      id: "Mengadakan seminar literasi digital dan pemrograman dasar untuk pemuda desa. Antusiasmenya sangat luar biasa! Kami juga mengajarkan cara memanfaatkan teknologi untuk pemasaran UMKM."
+      en: "Assisting and educating the community directly on the importance of sorting household waste. We focused on separating residue and plastic waste to foster good environmental habits within the Coblong community.",
+      id: "Membantu dan mengedukasi masyarakat secara langsung tentang pentingnya memilah sampah rumah tangga. Kami fokus pada pemisahan sampah residu dan plastik agar terbentuk kebiasaan peduli lingkungan yang baik di masyarakat Coblong."
     },
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1200"
+    image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: 3,
     date: "September 2026",
     week: "Minggu 3",
     title: {
-      en: "Revitalizing Local Infrastructure",
-      id: "Revitalisasi Infrastruktur Desa"
+      en: "Data-Driven Waste, Organized Environment",
+      id: "Sampah Terdata, Lingkungan Tertata"
     },
     description: {
-      en: "Got our hands dirty helping the community build a better irrigation system and repainting the local public library. It was exhausting but seeing the result made it all worth it.",
-      id: "Turun tangan langsung membantu warga membangun sistem irigasi yang lebih baik dan mengecat ulang perpustakaan desa. Melelahkan, namun melihat hasilnya membuat semua kerja keras ini terbayarkan."
+      en: "Implementing our grand theme 'Sampah Terdata, Lingkungan Tertata'. We are proud to provide a sustainable contribution, proving that students don't just learn on campus, but also make a direct, tangible impact on the community.",
+      id: "Mengimplementasikan tema besar 'Sampah Terdata, Lingkungan Tertata'. Kami bangga dapat memberikan kontribusi berkelanjutan, membuktikan bahwa mahasiswa tidak hanya belajar di kampus, tapi juga memberikan dampak nyata bagi masyarakat."
     },
-    image: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&q=80&w=1200"
+    image: "https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&q=80&w=1200"
   }
 ];

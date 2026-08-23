@@ -50,10 +50,16 @@ const resources = {
         "viewAll": "All projects",
         "list": [
           {
-            "title": "Personal Portfolio Website",
-            "description": "Interactive portfolio website to strengthen personal branding and showcase modern skills.",
-            "tags": ["React", "TailwindCSS", "Typescript"],
-            "image": "/images/projects/portoflio.png"
+            "title": "Mobile Redesign - Portfolio",
+            "description": "A fully responsive mobile redesign of this personal portfolio, featuring a brutalist bento grid, immersive typography, and neon cyber aesthetics.",
+            "tags": ["React", "TailwindCSS", "Framer Motion"],
+            "image": "/images/projects/mobile-portfolio.jpg"
+          },
+          {
+            "title": "Piano Teacher Portfolio",
+            "description": "An elegant and modern personal branding website design for a private piano teacher. Built on the concept of 'Elegant Classical Piano meets Modern Minimalism' with warm ivory and charcoal palettes, highlighting professional music education.",
+            "tags": ["UI/UX Design", "Figma", "Branding"],
+            "image": "/images/projects/piano-teacher.jpg"
           },
           {
             "title": "Portfolio UI Design",
@@ -62,28 +68,10 @@ const resources = {
             "image": "/images/projects/portofolioui.png"
           },
           {
-            "title": "Anagram App UI Design",
-            "description": "Anagram app interface design focusing on simplicity and ease of exploration.",
-            "tags": ["Figma"],
-            "image": "/images/projects/anagramui.png"
-          },
-          {
             "title": "Social Awareness Website",
             "description": "Social campaign website raising awareness about humanitarian issues in Papua.",
             "tags": ["HTML", "CSS", "Javascript", "Webpack"],
             "image": "/images/projects/papua.png"
-          },
-          {
-            "title": "News Landing Page",
-            "description": "Lightweight news page with a modern and user-friendly interface.",
-            "tags": ["HTML", "CSS", "Javascript"],
-            "image": "/images/projects/news.png"
-          },
-          {
-            "title": "Anagram Finder Web App",
-            "description": "Fast anagram finder application based on algorithms with a minimalist interface.",
-            "tags": ["Javascript", "SCSS", "Web Component"],
-            "image": "/images/projects/anagram.png"
           },
           {
             "title": "City Blog Web App",
@@ -96,18 +84,6 @@ const resources = {
             "description": "RESTful API for book collection management, complete with docs and deployment-ready.",
             "tags": ["Postman", "NodeJS", "Google Cloud"],
             "image": "/images/projects/bookshelf.png"
-          },
-          {
-            "title": "Todolist Web App",
-            "description": "Simple to-do list app to track and complete daily tasks.",
-            "tags": ["HTML", "CSS", "Javascript"],
-            "image": "/images/projects/todolist.png"
-          },
-          {
-            "title": "Suwit Jawa Game",
-            "description": "Local Rock-Paper-Scissors game with responsive view and interactive experience.",
-            "tags": ["HTML", "CSS", "Javascript"],
-            "image": "/images/projects/suwitjawa.png"
           }
         ]
       },
@@ -146,14 +122,15 @@ const resources = {
         "title": "Certificates & Achievements",
         "subtitle": "Official Documents & Honors",
         "list": [
-          { "title": "React Developer level Intermediate", "date": "March 2025", "issuer": "IDCamp 2024 by Indosat Ooredoo Hutchison", "image": "/images/certificate/certicicate-idcamp(react).jpg" },
-          { "title": "Frontend Developer (React)", "date": "February 2025", "issuer": "HackerRank", "image": "/images/certificate/certificate-hackerrank.jpg" },
-          { "title": "Javascript Intermediate (Gold)", "date": "February 2025", "issuer": "Skilvul", "image": "/images/certificate/certificate-gold.jpg" },
+          { "title": "Software Engineer", "date": "August 2026", "issuer": "HackerRank", "image": "/images/certificate/hackerrank-swe.png" },
+          { "title": "React Developer Expert", "date": "June 2025", "issuer": "IDCamp 2024 by Indosat Ooredoo Hutchison", "image": "/images/certificate/idcamp-react.png" },
+          { "title": "Flutter Developer Expert", "date": "January 2025", "issuer": "IDCamp 2025 by Indosat Ooredoo Hutchison", "image": "/images/certificate/flutter-expert.png" },
+          { "title": "Frontend Developer Expert", "date": "January 2024", "issuer": "Dicoding Indonesia", "image": "/images/certificate/dicoding-frontend.png" },
           { "title": "UI/UX Design With Figma", "date": "October 2024", "issuer": "Udemy", "image": "/images/certificate/certificate-figma.jpg" },
-          { "title": "Frontend Developer Expert", "date": "January 2024", "issuer": "Dicoding Indonesia", "image": "/images/certificate/certificate-expert.jpg" },
+          { "title": "Javascript Intermediate (Gold)", "date": "February 2025", "issuer": "Skilvul", "image": "/images/certificate/certificate-gold.jpg" },
+          { "title": "Introduction Cyber Security", "date": "April 2023", "issuer": "Cisco Academy", "image": "/images/certificate/certificate-cyber.jpg" },
           { "title": "Belajar Cepat Vue.JS", "date": "June 2023", "issuer": "Codepolitan", "image": "/images/certificate/certificate-vue.jpg" },
           { "title": "Jquery Basic", "date": "June 2023", "issuer": "Codepolitan", "image": "/images/certificate/certificate-jquery.jpg" },
-          { "title": "Introduction Cyber Security", "date": "April 2023", "issuer": "Cisco Academy", "image": "/images/certificate/certificate-cyber.jpg" },
           { "title": "Web Programming Basic", "date": "March 2023", "issuer": "Jabar Digital Academy", "image": "/images/certificate/certificate-pemweb.jpg" }
         ],
         "view": "View Credential"
@@ -181,6 +158,11 @@ const resources = {
         "title": "The KKN Chronicles",
         "subtitle": "A collection of stories, thoughts, and memories from the community service program.",
         "read_more": "Read Story"
+      },
+      "notfound": {
+        "title": "PAGE NOT FOUND",
+        "description": "Whoops! It looks like you've wandered off the grid. The coordinates you provided don't exist in our current dimension.",
+        "button": "Return to Base"
       }
     }
   },
@@ -232,10 +214,16 @@ const resources = {
         "viewAll": "Semua proyek",
         "list": [
           {
-            "title": "Website Portofolio Personal",
-            "description": "Website portofolio interaktif untuk memperkuat personal branding dan menampilkan keahlian modern.",
-            "tags": ["React", "TailwindCSS", "Typescript"],
-            "image": "/images/projects/portoflio.png"
+            "title": "Desain Mobile - Portofolio",
+            "description": "Desain ulang versi mobile dari portofolio personal ini, menampilkan antarmuka bento grid brutalist, tipografi imersif, dan estetika siber neon.",
+            "tags": ["React", "TailwindCSS", "Framer Motion"],
+            "image": "/images/projects/mobile-portfolio.jpg"
+          },
+          {
+            "title": "Portofolio Guru Piano",
+            "description": "Desain website personal branding elegan dan modern untuk guru les piano privat. Mengusung konsep 'Elegant Classical Piano meets Modern Minimalism' dengan palet ivory dan charcoal yang hangat, menonjolkan profesionalitas pendidikan musik.",
+            "tags": ["UI/UX Design", "Figma", "Branding"],
+            "image": "/images/projects/piano-teacher.jpg"
           },
           {
             "title": "Desain UI Portofolio",
@@ -244,28 +232,10 @@ const resources = {
             "image": "/images/projects/portofolioui.png"
           },
           {
-            "title": "Desain UI Aplikasi Anagram",
-            "description": "Desain antarmuka aplikasi anagram dengan fokus pada kesederhanaan dan kemudahan eksplorasi.",
-            "tags": ["Figma"],
-            "image": "/images/projects/anagramui.png"
-          },
-          {
             "title": "Website Kesadaran Sosial",
             "description": "Website kampanye sosial untuk meningkatkan kesadaran tentang isu kemanusiaan di Papua.",
             "tags": ["HTML", "CSS", "Javascript", "Webpack"],
             "image": "/images/projects/papua.png"
-          },
-          {
-            "title": "Halaman Utama Berita",
-            "description": "Halaman berita ringan dengan antarmuka yang modern dan ramah pengguna.",
-            "tags": ["HTML", "CSS", "Javascript"],
-            "image": "/images/projects/news.png"
-          },
-          {
-            "title": "Aplikasi Web Pencari Anagram",
-            "description": "Aplikasi pencari anagram yang cepat berbasis algoritma dengan antarmuka minimalis.",
-            "tags": ["Javascript", "SCSS", "Web Component"],
-            "image": "/images/projects/anagram.png"
           },
           {
             "title": "Aplikasi Web Blog Kota",
@@ -278,18 +248,6 @@ const resources = {
             "description": "RESTful API untuk manajemen koleksi buku, lengkap dengan dokumentasi dan siap di-deploy.",
             "tags": ["Postman", "NodeJS", "Google Cloud"],
             "image": "/images/projects/bookshelf.png"
-          },
-          {
-            "title": "Aplikasi Web Todolist",
-            "description": "Aplikasi daftar tugas sederhana untuk melacak dan menyelesaikan tugas harian.",
-            "tags": ["HTML", "CSS", "Javascript"],
-            "image": "/images/projects/todolist.png"
-          },
-          {
-            "title": "Permainan Suwit Jawa",
-            "description": "Permainan Suwit Jawa lokal dengan tampilan responsif dan pengalaman interaktif.",
-            "tags": ["HTML", "CSS", "Javascript"],
-            "image": "/images/projects/suwitjawa.png"
           }
         ]
       },
@@ -328,14 +286,15 @@ const resources = {
         "title": "Sertifikat & Pencapaian",
         "subtitle": "Dokumen Resmi & Penghargaan",
         "list": [
-          { "title": "React Developer level Intermediate", "date": "Maret 2025", "issuer": "IDCamp 2024 by Indosat Ooredoo Hutchison", "image": "/images/certificate/certicicate-idcamp(react).jpg" },
-          { "title": "Frontend Developer (React)", "date": "Februari 2025", "issuer": "HackerRank", "image": "/images/certificate/certificate-hackerrank.jpg" },
-          { "title": "Javascript Intermediate (Gold)", "date": "Februari 2025", "issuer": "Skilvul", "image": "/images/certificate/certificate-gold.jpg" },
+          { "title": "Software Engineer", "date": "Agustus 2026", "issuer": "HackerRank", "image": "/images/certificate/hackerrank-swe.png" },
+          { "title": "React Developer Expert", "date": "Juni 2025", "issuer": "IDCamp 2024 by Indosat Ooredoo Hutchison", "image": "/images/certificate/idcamp-react.png" },
+          { "title": "Flutter Developer Expert", "date": "Januari 2025", "issuer": "IDCamp 2025 by Indosat Ooredoo Hutchison", "image": "/images/certificate/flutter-expert.png" },
+          { "title": "Frontend Developer Expert", "date": "Januari 2024", "issuer": "Dicoding Indonesia", "image": "/images/certificate/dicoding-frontend.png" },
           { "title": "UI/UX Design With Figma", "date": "Oktober 2024", "issuer": "Udemy", "image": "/images/certificate/certificate-figma.jpg" },
-          { "title": "Frontend Developer Expert", "date": "Januari 2024", "issuer": "Dicoding Indonesia", "image": "/images/certificate/certificate-expert.jpg" },
+          { "title": "Javascript Intermediate (Gold)", "date": "Februari 2025", "issuer": "Skilvul", "image": "/images/certificate/certificate-gold.jpg" },
+          { "title": "Introduction Cyber Security", "date": "April 2023", "issuer": "Cisco Academy", "image": "/images/certificate/certificate-cyber.jpg" },
           { "title": "Belajar Cepat Vue.JS", "date": "Juni 2023", "issuer": "Codepolitan", "image": "/images/certificate/certificate-vue.jpg" },
           { "title": "Jquery Basic", "date": "Juni 2023", "issuer": "Codepolitan", "image": "/images/certificate/certificate-jquery.jpg" },
-          { "title": "Introduction Cyber Security", "date": "April 2023", "issuer": "Cisco Academy", "image": "/images/certificate/certificate-cyber.jpg" },
           { "title": "Web Programming Basic", "date": "Maret 2023", "issuer": "Jabar Digital Academy", "image": "/images/certificate/certificate-pemweb.jpg" }
         ],
         "view": "Lihat Kredensial"
@@ -363,6 +322,11 @@ const resources = {
         "title": "Catatan KKN",
         "subtitle": "Kumpulan cerita, pemikiran, dan kenangan selama program Kuliah Kerja Nyata.",
         "read_more": "Baca Cerita"
+      },
+      "notfound": {
+        "title": "HALAMAN TIDAK DITEMUKAN",
+        "description": "Ups! Sepertinya Anda keluar dari jalur. Koordinat yang Anda tuju tidak tersedia di dimensi ini.",
+        "button": "Kembali ke Beranda"
       }
     }
   }

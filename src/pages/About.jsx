@@ -28,7 +28,7 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal variant="pop-in" delay={0.2} className="w-full md:max-w-sm lg:max-w-md z-20 md:mb-4">
-            <div className="bg-mcm-cream dark:bg-[#1F222B] p-5 md:p-6 border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] rotate-2 hover:rotate-0 transition-transform">
+            <div className="bg-mcm-cream dark:bg-[#1F222B] p-5 md:p-6 border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] rotate-2 hover:rotate-0 transition-transform">
               <p className="font-display font-bold text-lg md:text-xl uppercase text-mcm-dark dark:text-[#EBE7DF] leading-snug border-l-4 md:border-l-8 border-mcm-teal pl-4">
                 {t('about.quote')}
               </p>
@@ -64,7 +64,7 @@ export default function About() {
       <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 pt-20 pb-12">
         <ScrollReveal variant="fade-up">
 
-          <div className="w-full grid grid-cols-1 lg:grid-cols-12 border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[16px_16px_0px_0px_#F4F1EA] bg-mcm-cream dark:bg-[#14161C] overflow-hidden">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-12 border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:dark:shadow-[16px_16px_0px_0px_#F4F1EA] bg-mcm-cream dark:bg-[#14161C] overflow-hidden">
 
 
             <div className="lg:col-span-5 relative border-b-8 lg:border-b-0 lg:border-r-8 border-mcm-dark dark:border-[#EBE7DF] group overflow-hidden">
@@ -74,7 +74,7 @@ export default function About() {
                 className="w-full h-full object-cover min-h-[400px] grayscale contrast-125 sepia-[0.3] group-hover:grayscale-0 group-hover:sepia-0 transition-all duration-700"
               />
               <div className="absolute top-4 left-4 bg-mcm-mustard border-4 border-mcm-dark font-display font-bold uppercase px-4 py-2 text-mcm-dark text-sm tracking-widest shadow-[4px_4px_0px_0px_rgba(44,43,41,1)]">
-                EST. 2004
+                Bandung, Indonesia
               </div>
             </div>
 
@@ -139,7 +139,7 @@ export default function About() {
                 <div className="absolute -left-6 md:-left-16 top-6 md:top-6 w-6 md:w-16 h-1 md:h-2 bg-mcm-dark dark:bg-[#EBE7DF]"></div>
 
 
-                <div className={`relative ${cardBgClass} border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] md:shadow-[12px_12px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA] md:dark:shadow-[12px_12px_0px_0px_#F4F1EA] p-5 md:p-6 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:hover:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] hover:dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:hover:dark:shadow-[16px_16px_0px_0px_#F4F1EA] transition-all duration-300 overflow-hidden`}>
+                <div className={`relative ${cardBgClass} border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] md:shadow-[12px_12px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA] md:shadow-[12px_12px_0px_0px_#F4F1EA] p-5 md:p-6 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:hover:dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:dark:shadow-[16px_16px_0px_0px_#F4F1EA] transition-all duration-300 overflow-hidden`}>
 
 
                   <Starburst size={200} color="rgba(44,43,41,0.03)" className="absolute -right-10 -top-10 pointer-events-none" />

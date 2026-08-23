@@ -56,8 +56,8 @@ export default function Navbar() {
         <nav
           className={`relative pointer-events-auto flex items-center justify-between w-full max-w-7xl px-3 py-2 rounded-full transition-all duration-500 border-4 ${
             isScrolled 
-              ? 'bg-mcm-mustard dark:bg-[#1F222B] border-mcm-dark dark:border-[#EBE7DF] shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA]' 
-              : 'bg-mcm-cream dark:bg-mcm-dark border-mcm-dark dark:border-[#EBE7DF] shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA]'
+              ? 'bg-mcm-mustard dark:bg-[#1F222B] border-mcm-dark dark:border-[#EBE7DF] shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA]' 
+              : 'bg-mcm-cream dark:bg-mcm-dark border-mcm-dark dark:border-[#EBE7DF] shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA]'
           }`}
         >
           
@@ -139,8 +139,8 @@ export default function Navbar() {
                     to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={({ isActive }) =>
-                      `block w-full text-center py-4 font-display font-bold uppercase tracking-widest text-3xl md:text-4xl border-4 border-mcm-dark dark:border-[#EBE7DF] shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA] transition-all ${
-                        isActive ? 'bg-mcm-mustard text-mcm-dark dark:text-[#EBE7DF] translate-x-2 -translate-y-2 shadow-[12px_12px_0px_0px_rgba(44,43,41,1)] dark:shadow-[12px_12px_0px_0px_#F4F1EA]' : 'bg-mcm-cream dark:bg-mcm-dark text-mcm-dark dark:text-[#EBE7DF] active:translate-x-2 active:-translate-y-2'
+                      `block w-full text-center py-4 font-display font-bold uppercase tracking-widest text-3xl md:text-4xl border-4 border-mcm-dark dark:border-[#EBE7DF] shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA] transition-all ${
+                        isActive ? 'bg-mcm-mustard text-mcm-dark dark:text-[#EBE7DF] translate-x-2 -translate-y-2 shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] md:shadow-[12px_12px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA] md:dark:shadow-[12px_12px_0px_0px_#F4F1EA]' : 'bg-mcm-cream dark:bg-mcm-dark text-mcm-dark dark:text-[#EBE7DF] active:translate-x-2 active:-translate-y-2'
                       }`
                     }
                   >
@@ -154,7 +154,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mt-4 sm:hidden bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA] p-2 flex gap-4 rounded-full w-fit"
+                className="mt-4 sm:hidden bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA] p-2 flex gap-4 rounded-full w-fit"
               >
                  <LanguageSwitcher />
                  <ThemeToggle />

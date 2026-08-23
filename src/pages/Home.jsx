@@ -17,12 +17,12 @@ export default function Home() {
     <div className="flex flex-col w-full pb-32">
 
 
-      <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-mcm-cream dark:bg-mcm-dark border-b-8 border-mcm-dark dark:border-[#EBE7DF]">
+      <section className="relative min-h-screen flex items-start lg:items-center pt-20 lg:pt-24 overflow-hidden bg-mcm-cream dark:bg-mcm-dark border-b-8 border-mcm-dark dark:border-[#EBE7DF]">
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 h-full min-h-[calc(100vh-6rem)]">
 
           <div className="lg:col-span-5 relative w-full h-full min-h-[350px] md:min-h-[500px] border-r-0 lg:border-r-8 border-mcm-dark dark:border-[#EBE7DF] bg-mcm-mustard overflow-hidden flex flex-col justify-end">
             <Starburst size={300} color="var(--color-mcm-orange)" className="absolute -top-16 -left-16 animate-spin-slow-reverse" />
-            <ScrollReveal variant="fade-up" className="relative w-full h-[85%] border-t-8 border-mcm-dark dark:border-[#EBE7DF] overflow-hidden bg-mcm-dark dark:bg-mcm-cream z-10 group">
+            <ScrollReveal variant="fade-up" className="relative w-full h-[92%] lg:h-[85%] border-t-8 border-mcm-dark dark:border-[#EBE7DF] overflow-hidden bg-mcm-dark dark:bg-mcm-cream z-10 group">
               <img
                 src="/images/profile/profile.JPG"
                 className="w-full h-full object-cover object-top grayscale contrast-[1.2] sepia-[0.2] group-hover:grayscale-0 group-hover:sepia-0 transition-all duration-700"
@@ -30,7 +30,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-mcm-orange/20 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500" />
             </ScrollReveal>
-            <div className="absolute top-8 right-8 bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] p-3 shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA] z-20 rotate-6">
+            <div className="absolute top-8 right-8 bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] p-3 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA] z-20 rotate-6">
               <span className="font-display font-bold uppercase text-mcm-dark dark:text-[#EBE7DF] text-xl leading-none tracking-widest block text-center">Vol. 1 A</span>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal variant="slide-left" delay={0.2} className="shrink-0 w-full md:w-auto">
-            <NavLink to="/about" className="mcm-btn px-8 py-4 w-full md:w-auto inline-flex items-center justify-center gap-3 text-lg group bg-mcm-cream dark:bg-mcm-dark text-mcm-dark dark:text-[#EBE7DF] hover:bg-mcm-mustard border-4 shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA]">
+            <NavLink to="/about" className="mcm-btn px-8 py-4 w-full md:w-auto inline-flex items-center justify-center gap-3 text-lg group bg-mcm-cream dark:bg-mcm-dark text-mcm-dark dark:text-[#EBE7DF] hover:bg-mcm-mustard border-4 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA]">
               Read Full Bio <ArrowRight size={24} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />
             </NavLink>
           </ScrollReveal>
@@ -112,7 +112,7 @@ export default function Home() {
 
         {featuredProject && (
           <ScrollReveal variant="pop-in">
-            <div className="relative w-full flex flex-col lg:flex-row lg:items-end justify-start lg:justify-end border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:dark:shadow-[16px_16px_0px_0px_#F4F1EA] group overflow-hidden bg-mcm-dark dark:bg-mcm-cream min-h-[500px] lg:h-[600px]">
+            <div className="relative w-full flex flex-col lg:flex-row lg:items-end justify-start lg:justify-end border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:shadow-[16px_16px_0px_0px_#F4F1EA] group overflow-hidden bg-mcm-dark dark:bg-mcm-cream min-h-[500px] lg:h-[600px]">
 
 
               <img
@@ -126,7 +126,7 @@ export default function Home() {
               </div>
 
 
-              <div className="relative z-10 bg-mcm-cream dark:bg-mcm-dark border-4 lg:border-t-0 lg:border-l-8 lg:border-t-8 border-mcm-dark dark:border-[#EBE7DF] p-6 md:p-10 w-[90%] md:w-[80%] lg:w-[600px] lg:max-w-[60%] flex flex-col justify-center transform lg:translate-x-8 lg:translate-y-8 mt-auto mx-auto mb-6 lg:mt-0 lg:mx-0 lg:mb-0 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] lg:shadow-none dark:shadow-[8px_8px_0px_0px_#F4F1EA] lg:dark:shadow-none">
+              <div className="relative z-10 bg-mcm-cream dark:bg-mcm-dark border-4 lg:border-t-0 lg:border-l-8 lg:border-t-8 border-mcm-dark dark:border-[#EBE7DF] p-6 md:p-10 w-[90%] md:w-[80%] lg:w-[600px] lg:max-w-[60%] flex flex-col justify-center transform lg:translate-x-8 lg:translate-y-8 mt-auto mx-auto mb-6 lg:mt-0 lg:mx-0 lg:mb-0 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] lg:shadow-none dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] lg:dark:shadow-none">
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {featuredProject.tags?.map((tag, i) => (
@@ -171,7 +171,7 @@ export default function Home() {
           <div className="flex flex-col gap-4">
             {Array.isArray(categories) && categories.slice(0, 3).map((cat, idx) => (
               <ScrollReveal key={idx} variant="fade-up" delay={idx * 0.1}>
-                <div className="bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] p-5 shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA] flex flex-col md:flex-row md:items-center gap-4 hover:-translate-y-1 transition-transform">
+                <div className="bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] p-5 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA] flex flex-col md:flex-row md:items-center gap-4 hover:-translate-y-1 transition-transform">
                   <div className="bg-mcm-orange text-mcm-cream dark:text-mcm-dark font-display font-bold uppercase px-4 py-2 border-2 border-mcm-dark dark:border-[#EBE7DF] whitespace-nowrap text-center md:w-auto md:min-w-[250px] shrink-0">
                     {cat.name}
                   </div>
@@ -200,7 +200,7 @@ export default function Home() {
           <div className="flex flex-col gap-6">
             {featuredCerts.map((cert, idx) => (
               <ScrollReveal key={idx} variant="fade-up" delay={idx * 0.1}>
-                <div className="bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] p-2 shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA] rotate-1 hover:rotate-0 transition-transform">
+                <div className="bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] p-2 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA] rotate-1 hover:rotate-0 transition-transform">
                   <div className="border-2 border-mcm-dark dark:border-[#EBE7DF]/30 p-4 flex flex-col gap-2 relative">
 
                     <div className="absolute top-2 right-2 w-12 h-12 border-2 border-mcm-teal rounded-full flex items-center justify-center opacity-50 rotate-12">
