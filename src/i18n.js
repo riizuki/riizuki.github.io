@@ -10,13 +10,14 @@ const resources = {
         "projects": "Projects",
         "skills": "Skills",
         "certificates": "Certificates",
-        "contact": "Contact"
+        "contact": "Contact",
+        "journal": "Journal"
       },
       "hero": {
         "greeting": "Hello, I am",
         "name": "Rizky Al Farid Hafizh.",
         "role": "A Software Engineer",
-        "description": "Building modern web and mobile applications. I turn complex ideas into meaningful digital experiences using clean design, scalable systems, and strong algorithmic foundations.",
+        "description": "Crafting digital experiences with a touch of retro futurism and brutalist principles.",
         "cta": "Contact me"
       },
       "about": {
@@ -175,6 +176,11 @@ const resources = {
         "honors": "Honors",
         "viewall": "View All",
         "featured": "Featured Work"
+      },
+      "journal": {
+        "title": "The KKN Chronicles",
+        "subtitle": "A collection of stories, thoughts, and memories from the community service program.",
+        "read_more": "Read Story"
       }
     }
   },
@@ -186,13 +192,14 @@ const resources = {
         "projects": "Proyek",
         "skills": "Keahlian",
         "certificates": "Sertifikat",
-        "contact": "Kontak"
+        "contact": "Kontak",
+        "journal": "Jurnal"
       },
       "hero": {
         "greeting": "Halo, saya",
         "name": "Rizky Al Farid Hafizh.",
         "role": "Software Engineer",
-        "description": "Membangun aplikasi web dan seluler modern. Saya mewujudkan ide kompleks menjadi pengalaman digital yang bermakna menggunakan desain bersih, sistem skalabel, dan fondasi algoritma yang kuat.",
+        "description": "Merancang pengalaman digital dengan sentuhan retro futurisme dan prinsip brutalisme.",
         "cta": "Hubungi saya"
       },
       "about": {
@@ -351,6 +358,11 @@ const resources = {
         "honors": "Penghargaan",
         "viewall": "Lihat Semua",
         "featured": "Karya Pilihan"
+      },
+      "journal": {
+        "title": "Catatan KKN",
+        "subtitle": "Kumpulan cerita, pemikiran, dan kenangan selama program Kuliah Kerja Nyata.",
+        "read_more": "Baca Cerita"
       }
     }
   }

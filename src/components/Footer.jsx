@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-1 sm:text-right">
               <span className="text-mcm-dark/50 dark:text-[#EBE7DF]/50">{t('footer.location')}</span>
-              <span className="text-lg">Cianjur, ID</span>
+              <span className="text-lg">Kota Bandung, ID</span>
             </div>
             <div className="flex flex-col gap-1 sm:text-right">
               <span className="text-mcm-dark/50 dark:text-[#EBE7DF]/50">{t('footer.copyrighttext')}</span>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         
-        <div className="lg:col-span-5 bg-mcm-teal dark:bg-[#1A1918] p-8 md:p-16 flex flex-col justify-center relative">
+        <div className="lg:col-span-5 bg-mcm-teal dark:bg-[#14161C] p-8 md:p-16 flex flex-col justify-center relative">
           
           <ScrollReveal variant="slide-left" delay={0.1} className="w-full flex flex-col gap-6 relative z-10">
             <h3 className="font-display font-bold text-2xl md:text-3xl uppercase tracking-widest text-mcm-mustard dark:text-mcm-orange mb-4 border-b-4 border-mcm-mustard/30 dark:border-mcm-orange/30 pb-4 inline-block w-fit">
@@ -89,7 +89,7 @@ export default function Footer() {
                 href={link.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative w-full bg-mcm-cream dark:bg-[#201F1D] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-6 flex items-center justify-between shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] hover:translate-x-2 hover:-translate-y-2 hover:shadow-[14px_14px_0px_0px_rgba(226,166,59,1)] transition-all duration-300"
+                className="group relative w-full bg-mcm-cream dark:bg-[#1F222B] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-6 flex items-center justify-between shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] hover:translate-x-2 hover:-translate-y-2 hover:shadow-[14px_14px_0px_0px_rgba(226,166,59,1)] transition-all duration-300"
               >
                 <span className="font-display font-bold text-2xl md:text-3xl uppercase text-mcm-dark dark:text-[#EBE7DF]">
                   {link.name}

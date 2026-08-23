@@ -41,7 +41,7 @@ export default function Contact() {
           <div className="w-full lg:w-1/3 flex flex-col gap-10">
             <ScrollReveal variant="slide-right" delay={0.1} className="flex flex-col gap-8">
               
-              <div className="bg-mcm-mustard dark:bg-[#1A1918] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA]">
+              <div className="bg-mcm-mustard dark:bg-[#14161C] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA]">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-mcm-orange p-3 border-4 border-mcm-dark dark:border-[#EBE7DF]">
                     <Mail size={24} className="text-mcm-cream dark:text-mcm-dark" strokeWidth={2.5} />
@@ -53,7 +53,7 @@ export default function Contact() {
                 </a>
               </div>
 
-              <div className="bg-mcm-teal dark:bg-[#201F1D] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA]">
+              <div className="bg-mcm-teal dark:bg-[#1F222B] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-8 shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA]">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="bg-mcm-cream dark:bg-mcm-dark p-3 border-4 border-mcm-dark dark:border-[#EBE7DF]">
                     <MapPin size={24} className="text-mcm-teal dark:text-mcm-orange" strokeWidth={2.5} />
@@ -61,7 +61,7 @@ export default function Contact() {
                   <h3 className="font-display font-bold text-2xl uppercase text-mcm-cream dark:text-[#EBE7DF]">{t('contact.location')}</h3>
                 </div>
                 <p className="font-sans font-bold text-lg md:text-xl text-mcm-cream/90 dark:text-[#EBE7DF]/90">
-                  Cianjur, Jawa Barat, Indonesia
+                  Kota Bandung, Jawa Barat, Indonesia
                 </p>
               </div>
 
@@ -87,7 +87,7 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-[#F4F1EA] dark:bg-[#1A1918] border-4 border-mcm-dark dark:border-[#EBE7DF] px-6 py-4 font-sans font-bold text-lg text-mcm-dark dark:text-[#EBE7DF] outline-none focus:border-mcm-orange focus:bg-mcm-cream dark:focus:border-mcm-orange dark:focus:bg-mcm-dark transition-colors placeholder:text-mcm-dark/30 dark:placeholder:text-[#EBE7DF]/30"
+                    className="w-full bg-[#F4F1EA] dark:bg-[#14161C] border-4 border-mcm-dark dark:border-[#EBE7DF] px-6 py-4 font-sans font-bold text-lg text-mcm-dark dark:text-[#EBE7DF] outline-none focus:border-mcm-orange focus:bg-mcm-cream dark:focus:border-mcm-orange dark:focus:bg-mcm-dark transition-colors placeholder:text-mcm-dark/30 dark:placeholder:text-[#EBE7DF]/30"
                     placeholder="John Doe"
                     required
                   />
@@ -104,7 +104,7 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-[#F4F1EA] dark:bg-[#1A1918] border-4 border-mcm-dark dark:border-[#EBE7DF] px-6 py-4 font-sans font-bold text-lg text-mcm-dark dark:text-[#EBE7DF] outline-none focus:border-mcm-orange focus:bg-mcm-cream dark:focus:border-mcm-orange dark:focus:bg-mcm-dark transition-colors placeholder:text-mcm-dark/30 dark:placeholder:text-[#EBE7DF]/30"
+                    className="w-full bg-[#F4F1EA] dark:bg-[#14161C] border-4 border-mcm-dark dark:border-[#EBE7DF] px-6 py-4 font-sans font-bold text-lg text-mcm-dark dark:text-[#EBE7DF] outline-none focus:border-mcm-orange focus:bg-mcm-cream dark:focus:border-mcm-orange dark:focus:bg-mcm-dark transition-colors placeholder:text-mcm-dark/30 dark:placeholder:text-[#EBE7DF]/30"
                     placeholder="hello@example.com"
                     required
                   />
@@ -121,7 +121,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className="w-full bg-[#F4F1EA] dark:bg-[#1A1918] border-4 border-mcm-dark dark:border-[#EBE7DF] px-6 py-4 font-sans font-bold text-lg text-mcm-dark dark:text-[#EBE7DF] outline-none focus:border-mcm-orange focus:bg-mcm-cream dark:focus:border-mcm-orange dark:focus:bg-mcm-dark transition-colors placeholder:text-mcm-dark/30 dark:placeholder:text-[#EBE7DF]/30 resize-none"
+                    className="w-full bg-[#F4F1EA] dark:bg-[#14161C] border-4 border-mcm-dark dark:border-[#EBE7DF] px-6 py-4 font-sans font-bold text-lg text-mcm-dark dark:text-[#EBE7DF] outline-none focus:border-mcm-orange focus:bg-mcm-cream dark:focus:border-mcm-orange dark:focus:bg-mcm-dark transition-colors placeholder:text-mcm-dark/30 dark:placeholder:text-[#EBE7DF]/30 resize-none"
                     placeholder="Tell me about your project..."
                     required
                   />

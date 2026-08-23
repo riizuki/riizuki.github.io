@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: t('nav.projects'), path: '/projects' },
     { name: t('nav.skills'), path: '/skills' },
     { name: t('nav.certificates'), path: '/certificates' },
+    { name: t('nav.journal'), path: '/journal' },
     { name: t('nav.contact'), path: '/contact' },
   ];
 
@@ -53,9 +54,9 @@ export default function Navbar() {
         transition={{ type: 'spring', stiffness: 400, damping: 25 }}
       >
         <nav
-          className={`pointer-events-auto flex items-center justify-between w-full max-w-5xl px-3 py-2 rounded-full transition-all duration-500 border-4 ${
+          className={`relative pointer-events-auto flex items-center justify-between w-full max-w-7xl px-3 py-2 rounded-full transition-all duration-500 border-4 ${
             isScrolled 
-              ? 'bg-mcm-mustard dark:bg-[#201F1D] border-mcm-dark dark:border-[#EBE7DF] shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA]' 
+              ? 'bg-mcm-mustard dark:bg-[#1F222B] border-mcm-dark dark:border-[#EBE7DF] shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[6px_6px_0px_0px_#F4F1EA]' 
               : 'bg-mcm-cream dark:bg-mcm-dark border-mcm-dark dark:border-[#EBE7DF] shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA]'
           }`}
         >
@@ -71,44 +72,39 @@ export default function Navbar() {
           </div>
 
           
-          <div className="flex items-center gap-4 z-50">
-            
-            
-            <div className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.name}
-                  to={link.path}
-                  className={({ isActive }) =>
-                    `relative font-display text-sm font-bold uppercase tracking-widest px-4 py-2 rounded-full transition-colors duration-200 ${
-                      isActive
-                        ? 'bg-mcm-dark dark:bg-[#EBE7DF] text-mcm-cream dark:text-mcm-dark'
-                        : 'text-mcm-dark dark:text-[#EBE7DF] hover:bg-mcm-teal/20'
-                    }`
-                  }
-                >
-                  {link.name}
-                </NavLink>
-              ))}
-            </div>
-
-            
-            <div className="flex items-center gap-2">
-              <div className="bg-mcm-cream dark:bg-mcm-dark rounded-full flex items-center border-2 border-mcm-dark dark:border-[#EBE7DF] overflow-hidden h-10 hidden sm:flex">
-                <LanguageSwitcher />
-                <div className="w-[2px] h-full bg-mcm-dark dark:bg-mcm-cream" />
-                <ThemeToggle />
-              </div>
-
-              
-              <button 
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden w-10 h-10 bg-mcm-orange border-2 border-mcm-dark dark:border-[#EBE7DF] rounded-full flex items-center justify-center text-mcm-dark dark:text-[#EBE7DF] hover:bg-mcm-teal hover:text-mcm-cream dark:text-mcm-dark transition-colors"
+          {/* Center: Navigation Links */}
+          <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-1 z-50">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.name}
+                to={link.path}
+                className={({ isActive }) =>
+                  `relative whitespace-nowrap font-display text-sm font-bold uppercase tracking-widest px-4 py-2 rounded-full transition-colors duration-200 ${
+                    isActive
+                      ? 'bg-mcm-dark dark:bg-[#EBE7DF] text-mcm-cream dark:text-mcm-dark'
+                      : 'text-mcm-dark dark:text-[#EBE7DF] hover:bg-mcm-teal/20'
+                  }`
+                }
               >
-                {isMobileMenuOpen ? <X size={24} strokeWidth={3} /> : <Menu size={24} strokeWidth={3} />}
-              </button>
+                {link.name}
+              </NavLink>
+            ))}
+          </div>
+
+          {/* Right: Theme & Language */}
+          <div className="flex items-center gap-2 z-50">
+            <div className="bg-mcm-cream dark:bg-mcm-dark rounded-full flex items-center border-2 border-mcm-dark dark:border-[#EBE7DF] overflow-hidden h-10 hidden sm:flex">
+              <LanguageSwitcher />
+              <div className="w-[2px] h-full bg-mcm-dark dark:bg-mcm-cream" />
+              <ThemeToggle />
             </div>
-            
+
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden w-10 h-10 bg-mcm-orange border-2 border-mcm-dark dark:border-[#EBE7DF] rounded-full flex items-center justify-center text-mcm-dark dark:text-[#EBE7DF] hover:bg-mcm-teal hover:text-mcm-cream dark:text-mcm-dark transition-colors"
+            >
+              {isMobileMenuOpen ? <X size={24} strokeWidth={3} /> : <Menu size={24} strokeWidth={3} />}
+            </button>
           </div>
           
         </nav>
@@ -122,7 +118,7 @@ export default function Navbar() {
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed inset-0 z-40 bg-mcm-teal flex flex-col items-center justify-start pt-32 pb-12 overflow-y-auto"
+            className="fixed inset-0 z-40 bg-mcm-teal dark:bg-mcm-dark flex flex-col items-center justify-start pt-32 pb-12 overflow-y-auto overflow-x-hidden"
           >
             
             <Starburst size={600} color="rgba(44,43,41,0.05)" className="absolute -top-32 -left-32 animate-spin-slow pointer-events-none" />

@@ -20,11 +20,21 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
+  .dark {
+    --color-mcm-dark: #0B0C10;
+    --color-mcm-cream: #F4F1EA;
+    --color-mcm-mustard: #FFD600;
+    --color-mcm-orange: #FF4D00;
+    --color-mcm-teal: #00F0FF;
+    --color-mcm-olive: #39FF14;
+    --color-mcm-brown: #9D4EDD;
+  }
+
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth overflow-x-hidden w-full;
   }
   body {
-    @apply bg-mcm-cream text-mcm-dark transition-colors duration-300;
+    @apply bg-mcm-cream text-mcm-dark transition-colors duration-300 overflow-x-hidden w-full;
     font-family: "Outfit", system-ui, sans-serif;
     
   }
@@ -38,98 +48,98 @@
   }
 
   ::selection {
-    background: #E2A63B;
-    color: #2C2B29;
+    background: var(--color-mcm-mustard);
+    color: var(--color-mcm-dark);
   }
   .dark ::selection {
-    background: #D76B41;
-    color: #F4F1EA;
+    background: var(--color-mcm-orange);
+    color: var(--color-mcm-cream);
   }
 }
 
 @layer utilities {
   
   .mcm-card {
-    background: #F4F1EA;
-    border: 2px solid #2C2B29;
+    background: var(--color-mcm-cream);
+    border: 2px solid var(--color-mcm-dark);
     border-radius: 4px; 
-    box-shadow: 6px 6px 0px 0px #2C2B29;
+    box-shadow: 6px 6px 0px 0px var(--color-mcm-dark);
     transition: all 0.2s ease;
   }
   .dark .mcm-card {
-    background: #3A3835;
-    border-color: #F4F1EA;
-    box-shadow: 6px 6px 0px 0px #F4F1EA;
+    background: #14161C;
+    border-color: var(--color-mcm-cream);
+    box-shadow: 6px 6px 0px 0px var(--color-mcm-cream);
   }
   .mcm-card:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0px 0px #2C2B29;
+    box-shadow: 8px 8px 0px 0px var(--color-mcm-dark);
   }
   .dark .mcm-card:hover {
-    box-shadow: 8px 8px 0px 0px #F4F1EA;
+    box-shadow: 8px 8px 0px 0px var(--color-mcm-cream);
   }
   
   
   .mcm-card-click:active {
     transform: translate(4px, 4px) !important;
-    box-shadow: 2px 2px 0px 0px #2C2B29 !important;
+    box-shadow: 2px 2px 0px 0px var(--color-mcm-dark) !important;
   }
 
   
   .mcm-btn {
-    background: #E2A63B;
-    color: #2C2B29;
-    border: 2px solid #2C2B29;
+    background: var(--color-mcm-mustard);
+    color: var(--color-mcm-dark);
+    border: 2px solid var(--color-mcm-dark);
     border-radius: 999px; 
     font-weight: 700;
     font-family: "Jost", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 4px 4px 0px 0px #2C2B29;
+    box-shadow: 4px 4px 0px 0px var(--color-mcm-dark);
     transition: all 0.15s ease;
     cursor: pointer;
   }
   .mcm-btn:hover {
-    background: #D76B41;
-    color: #F4F1EA;
+    background: var(--color-mcm-orange);
+    color: var(--color-mcm-cream);
     transform: translate(-1px, -1px);
-    box-shadow: 5px 5px 0px 0px #2C2B29;
+    box-shadow: 5px 5px 0px 0px var(--color-mcm-dark);
   }
   .dark .mcm-btn:hover {
-    box-shadow: 5px 5px 0px 0px #F4F1EA;
+    box-shadow: 5px 5px 0px 0px var(--color-mcm-cream);
   }
   .mcm-btn:active {
     transform: translate(3px, 3px);
-    box-shadow: 1px 1px 0px 0px #2C2B29;
+    box-shadow: 1px 1px 0px 0px var(--color-mcm-dark);
   }
   .dark .mcm-btn:active {
-    box-shadow: 1px 1px 0px 0px #F4F1EA;
+    box-shadow: 1px 1px 0px 0px var(--color-mcm-cream);
   }
 
   
   .mcm-btn-outline {
     background: transparent;
-    color: #2C2B29;
-    border: 2px solid #2C2B29;
+    color: var(--color-mcm-dark);
+    border: 2px solid var(--color-mcm-dark);
     border-radius: 999px;
     font-weight: 700;
     font-family: "Jost", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 4px 4px 0px 0px #2C2B29;
+    box-shadow: 4px 4px 0px 0px var(--color-mcm-dark);
     transition: all 0.15s ease;
   }
   .dark .mcm-btn-outline {
-    color: #F4F1EA;
-    border-color: #F4F1EA;
-    box-shadow: 4px 4px 0px 0px #F4F1EA;
+    color: var(--color-mcm-cream);
+    border-color: var(--color-mcm-cream);
+    box-shadow: 4px 4px 0px 0px var(--color-mcm-cream);
   }
   .mcm-btn-outline:hover {
-    background: #367A7D;
-    color: #F4F1EA;
-    border-color: #2C2B29;
+    background: var(--color-mcm-teal);
+    color: var(--color-mcm-cream);
+    border-color: var(--color-mcm-dark);
     transform: translate(-1px, -1px);
-    box-shadow: 5px 5px 0px 0px #2C2B29;
+    box-shadow: 5px 5px 0px 0px var(--color-mcm-dark);
   }
 
   
@@ -158,34 +168,34 @@
   
   .mcm-input {
     background: transparent;
-    border: 2px solid #2C2B29;
+    border: 2px solid var(--color-mcm-dark);
     border-radius: 0;
     padding: 12px 16px;
     font-family: "Outfit", sans-serif;
-    color: #2C2B29;
+    color: var(--color-mcm-dark);
     transition: all 0.2s ease;
   }
   .dark .mcm-input {
-    border-color: #F4F1EA;
-    color: #F4F1EA;
+    border-color: var(--color-mcm-cream);
+    color: var(--color-mcm-cream);
   }
   .mcm-input:focus {
     outline: none;
-    background: #E2A63B;
-    border-color: #2C2B29;
-    color: #2C2B29;
-    box-shadow: 4px 4px 0px 0px #2C2B29;
+    background: var(--color-mcm-mustard);
+    border-color: var(--color-mcm-dark);
+    color: var(--color-mcm-dark);
+    box-shadow: 4px 4px 0px 0px var(--color-mcm-dark);
     transform: translate(-2px, -2px);
   }
 
   
   .mcm-divider {
     height: 3px;
-    background-image: repeating-linear-gradient(90deg, #2C2B29, #2C2B29 8px, transparent 8px, transparent 16px);
+    background-image: repeating-linear-gradient(90deg, var(--color-mcm-dark), var(--color-mcm-dark) 8px, transparent 8px, transparent 16px);
     width: 100%;
   }
   .dark .mcm-divider {
-    background-image: repeating-linear-gradient(90deg, #F4F1EA, #F4F1EA 8px, transparent 8px, transparent 16px);
+    background-image: repeating-linear-gradient(90deg, var(--color-mcm-cream), var(--color-mcm-cream) 8px, transparent 8px, transparent 16px);
   }
 }
 

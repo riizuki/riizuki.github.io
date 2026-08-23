@@ -10,6 +10,7 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Certificates from './pages/Certificates';
 import Contact from './pages/Contact';
+import Journal from './pages/Journal';
 import Loader from './components/Loader';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <Route path="projects" element={<Projects />} />
               <Route path="skills" element={<Skills />} />
               <Route path="certificates" element={<Certificates />} />
+              <Route path="journal" element={<Journal />} />
               <Route path="contact" element={<Contact />} />
             </Route>
           </Routes>
