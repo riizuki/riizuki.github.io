@@ -17,7 +17,7 @@ const resources = {
         "greeting": "Hello, I am",
         "name": "Rizky Al Farid Hafizh.",
         "role": "A Software Engineer",
-        "description": "Crafting digital experiences with a touch of retro futurism and brutalist principles.",
+        "description": "Building modern web applications and crafting engaging digital experiences.",
         "cta": "Contact me"
       },
       "about": {
@@ -142,7 +142,7 @@ const resources = {
         "available": "Available for freelance",
         "lets": "Let's build",
         "thefuture": "the future.",
-        "crafting": "Crafting digital experiences with a touch of retro futurism and brutalist principles.",
+        "crafting": "Building modern web applications and crafting engaging digital experiences.",
         "localtime": "Local Time (WIB)",
         "location": "Location",
         "copyrighttext": "Copyright"
@@ -181,7 +181,7 @@ const resources = {
         "greeting": "Halo, saya",
         "name": "Rizky Al Farid Hafizh.",
         "role": "Software Engineer",
-        "description": "Merancang pengalaman digital dengan sentuhan retro futurisme dan prinsip brutalisme.",
+        "description": "Membangun aplikasi web modern dan menciptakan pengalaman digital yang menarik.",
         "cta": "Hubungi saya"
       },
       "about": {
@@ -306,7 +306,7 @@ const resources = {
         "available": "Tersedia untuk freelance",
         "lets": "Mari bangun",
         "thefuture": "masa depan.",
-        "crafting": "Merancang pengalaman digital dengan sentuhan retro futurisme dan prinsip brutalisme.",
+        "crafting": "Membangun aplikasi web modern dan menciptakan pengalaman digital yang menarik.",
         "localtime": "Waktu Lokal (WIB)",
         "location": "Lokasi",
         "copyrighttext": "Hak Cipta"

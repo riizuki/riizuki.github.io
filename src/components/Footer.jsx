@@ -25,8 +25,8 @@ export default function Footer() {
 
   const socials = [
     { name: 'GitHub', url: 'https://github.com/riizuki' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/riizuki' },
-    { name: 'Instagram', url: 'https://instagram.com/riizuki' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/rizkyalfaridhafizh' },
+    { name: 'Instagram', url: 'https://www.instagram.com/rizky31afh_/' },
   ];
 
   return (
@@ -88,7 +88,7 @@ export default function Footer() {
                 key={link.name}
                 href={link.url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="group relative w-full bg-mcm-cream dark:bg-[#1F222B] border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] p-6 flex items-center justify-between shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[8px_8px_0px_0px_#F4F1EA] hover:translate-x-2 hover:-translate-y-2 hover:shadow-[6px_6px_0px_0px_rgba(226,166,59,1)] md:hover:shadow-[14px_14px_0px_0px_rgba(226,166,59,1)] transition-all duration-300"
               >
                 <span className="font-display font-bold text-2xl md:text-3xl uppercase text-mcm-dark dark:text-[#EBE7DF]">

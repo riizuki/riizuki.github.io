@@ -20,18 +20,58 @@ export default function Home() {
       <section className="relative min-h-screen flex items-start lg:items-center pt-20 lg:pt-24 overflow-hidden bg-mcm-cream dark:bg-mcm-dark border-b-8 border-mcm-dark dark:border-[#EBE7DF]">
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 h-full min-h-[calc(100vh-6rem)]">
 
-          <div className="lg:col-span-5 relative w-full h-full min-h-[350px] md:min-h-[500px] border-r-0 lg:border-r-8 border-mcm-dark dark:border-[#EBE7DF] bg-mcm-mustard overflow-hidden flex flex-col justify-end">
-            <Starburst size={300} color="var(--color-mcm-orange)" className="absolute -top-16 -left-16 animate-spin-slow-reverse" />
-            <ScrollReveal variant="fade-up" className="relative w-full h-[92%] lg:h-[85%] border-t-8 border-mcm-dark dark:border-[#EBE7DF] overflow-hidden bg-mcm-dark dark:bg-mcm-cream z-10 group">
-              <img
-                src="/images/profile/profile.JPG"
-                className="w-full h-full object-cover object-top grayscale contrast-[1.2] sepia-[0.2] group-hover:grayscale-0 group-hover:sepia-0 transition-all duration-700"
-                alt="Rizky Profile"
-              />
-              <div className="absolute inset-0 bg-mcm-orange/20 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500" />
-            </ScrollReveal>
-            <div className="absolute top-8 right-8 bg-mcm-cream dark:bg-mcm-dark border-4 border-mcm-dark dark:border-[#EBE7DF] p-3 shadow-[4px_4px_0px_0px_rgba(44,43,41,1)] md:shadow-[6px_6px_0px_0px_rgba(44,43,41,1)] dark:shadow-[4px_4px_0px_0px_#F4F1EA] md:dark:shadow-[6px_6px_0px_0px_#F4F1EA] z-20 rotate-6">
-              <span className="font-display font-bold uppercase text-mcm-dark dark:text-[#EBE7DF] text-xl leading-none tracking-widest block text-center">Vol. 1 A</span>
+          <div
+            className="lg:col-span-5 relative w-full h-full min-h-[450px] md:min-h-[500px] border-r-0 lg:border-r-8 border-mcm-dark dark:border-[#EBE7DF] bg-mcm-mustard overflow-hidden flex flex-col justify-center items-center p-8 md:p-12"
+            style={{ backgroundImage: 'radial-gradient(circle, rgba(44,43,41,0.1) 3px, transparent 3px)', backgroundSize: '30px 30px' }}
+          >
+            <div className="relative w-full max-w-[360px] md:max-w-[400px]">
+              <Starburst size={140} color="var(--color-mcm-teal)" className="absolute -top-12 -right-12 animate-spin-slow-reverse z-0" />
+              <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-mcm-orange rounded-full border-4 border-mcm-dark dark:border-[#EBE7DF] z-0 opacity-80" />
+
+              <ScrollReveal variant="fade-up" className="relative w-full border-4 md:border-8 border-mcm-dark dark:border-[#EBE7DF] shadow-[8px_8px_0px_0px_rgba(44,43,41,1)] md:shadow-[16px_16px_0px_0px_rgba(44,43,41,1)] dark:shadow-[8px_8px_0px_0px_#F4F1EA] md:dark:shadow-[16px_16px_0px_0px_#F4F1EA] bg-mcm-cream dark:bg-[#14161C] flex flex-col group z-10 hover:-translate-y-2 transition-transform duration-500">
+
+                <div className="w-full bg-mcm-dark dark:bg-[#EBE7DF] px-4 py-3 flex justify-between items-center">
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-[#F27E63] border-2 border-mcm-dark dark:border-[#14161C]" />
+                    <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-mcm-mustard border-2 border-mcm-dark dark:border-[#14161C]" />
+                    <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-mcm-teal border-2 border-mcm-dark dark:border-[#14161C]" />
+                  </div>
+                  <span className="font-display font-bold text-mcm-cream dark:text-[#14161C] text-xs md:text-sm uppercase tracking-widest">
+                    USER_PROFILE.JPG
+                  </span>
+                </div>
+
+                <div className="relative w-full aspect-square overflow-hidden bg-mcm-dark flex items-center justify-center">
+                  <img
+                    src="/images/profile/profile.JPG"
+                    className="w-full h-full object-cover object-center grayscale contrast-[1.2] sepia-[0.2] group-hover:grayscale-0 group-hover:sepia-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                    alt="Rizky Profile"
+                  />
+                  <div className="absolute inset-0 bg-mcm-orange/20 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500" />
+
+                  <div className="absolute top-4 left-4 w-6 h-6 border-t-4 border-l-4 border-mcm-cream/80" />
+                  <div className="absolute top-4 right-4 w-6 h-6 border-t-4 border-r-4 border-mcm-cream/80" />
+                  <div className="absolute bottom-4 left-4 w-6 h-6 border-b-4 border-l-4 border-mcm-cream/80" />
+                  <div className="absolute bottom-4 right-4 w-6 h-6 border-b-4 border-r-4 border-mcm-cream/80" />
+                </div>
+
+                <div className="w-full border-t-4 md:border-t-8 border-mcm-dark dark:border-[#EBE7DF] bg-mcm-cream dark:bg-[#1F222B] p-3 md:p-4 flex justify-between items-center">
+                  <span className="font-sans font-bold text-mcm-dark dark:text-[#EBE7DF] uppercase text-xs md:text-sm tracking-widest">
+                    SYS.STATUS // OPERATIONAL
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex h-3 w-3">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-mcm-teal opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-3 w-3 bg-mcm-teal border-2 border-mcm-dark"></span>
+                    </span>
+                    <span className="text-mcm-teal font-display font-bold uppercase text-xs md:text-sm tracking-widest">
+                      ONLINE
+                    </span>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+
             </div>
           </div>
 
