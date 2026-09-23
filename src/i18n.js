@@ -155,8 +155,8 @@ const resources = {
         "featured": "Featured Work"
       },
       "journal": {
-        "title": "The KKN Chronicles",
-        "subtitle": "A collection of stories, thoughts, and memories from the community service program.",
+        "title": "The Digital Chronicle",
+        "subtitle": "A collection of personal stories, thoughts, and memories.",
         "read_more": "Read Story"
       },
       "notfound": {
@@ -319,8 +319,8 @@ const resources = {
         "featured": "Karya Pilihan"
       },
       "journal": {
-        "title": "Catatan KKN",
-        "subtitle": "Kumpulan cerita, pemikiran, dan kenangan selama program Kuliah Kerja Nyata.",
+        "title": "The Digital Chronicle",
+        "subtitle": "Kumpulan cerita, pemikiran, dan kenangan pribadi.",
         "read_more": "Baca Cerita"
       },
       "notfound": {

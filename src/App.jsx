@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import 'lenis/dist/lenis.css';
 import { ThemeProvider } from './context/ThemeContext';
 import { LenisProvider } from './context/LenisContext';
@@ -38,6 +39,7 @@ function App() {
     <ThemeProvider>
       <LenisProvider>
         <Router>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />

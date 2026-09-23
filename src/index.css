@@ -219,3 +219,77 @@
 .animate-spin-slow-reverse {
   animation: spin-slow-reverse 15s linear infinite;
 }
+
+/* ===== FUTURISTIC STYLES ===== */
+
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.08; }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.futur-gradient-border {
+  background: linear-gradient(135deg, var(--color-mcm-teal), var(--color-mcm-orange), var(--color-mcm-mustard), var(--color-mcm-teal));
+  background-size: 300% 300%;
+  animation: border-flow 4s ease infinite;
+}
+
+.futur-glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+.futur-grid-bg {
+  background-image: 
+    linear-gradient(rgba(78, 205, 196, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 205, 196, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-pulse 5s ease-in-out infinite;
+}
+
+.dark .futur-grid-bg {
+  background-image: 
+    linear-gradient(rgba(0, 240, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.06) 1px, transparent 1px);
+}
+
+.futur-cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
+}
+
+.futur-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.futur-scanline {
+  animation: scanline 4s linear infinite;
+}
+
+.futur-float {
+  animation: float 6s ease-in-out infinite;
+}
